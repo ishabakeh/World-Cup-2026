@@ -1,0 +1,14 @@
+# Netlify deploy config. Build a static SPA; base stays "/" so no VITE_BASE needed.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# The app uses a hash router, so SPA redirects aren't strictly required, but this
+# keeps any non-hash path resolving to the app shell.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,0 +1,2421 @@
+{
+  "tournament": {
+    "id": "fwc-2026",
+    "name": "FIFA World Cup 2026",
+    "year": 2026,
+    "hosts": [
+      "USA",
+      "Canada",
+      "Mexico"
+    ],
+    "startDate": "2026-06-11",
+    "endDate": "2026-07-19",
+    "totalMatches": 104,
+    "teamCount": 48,
+    "groupCount": 12
+  },
+  "venues": [
+    {
+      "id": "azteca",
+      "stadium": "Estadio Azteca",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "capacity": 83000,
+      "lat": 19.3029,
+      "lng": -99.1505,
+      "tz": "America/Mexico_City",
+      "accent": "#0b6e4f"
+    },
+    {
+      "id": "akron",
+      "stadium": "Estadio Akron",
+      "city": "Guadalajara",
+      "country": "Mexico",
+      "capacity": 48000,
+      "lat": 20.6817,
+      "lng": -103.4625,
+      "tz": "America/Mexico_City",
+      "accent": "#c8102e"
+    },
+    {
+      "id": "bbva",
+      "stadium": "Estadio BBVA",
+      "city": "Monterrey",
+      "country": "Mexico",
+      "capacity": 53500,
+      "lat": 25.6692,
+      "lng": -100.2444,
+      "tz": "America/Monterrey",
+      "accent": "#1d3c87"
+    },
+    {
+      "id": "bmo",
+      "stadium": "BMO Field",
+      "city": "Toronto",
+      "country": "Canada",
+      "capacity": 45000,
+      "lat": 43.6332,
+      "lng": -79.4185,
+      "tz": "America/Toronto",
+      "accent": "#c8102e"
+    },
+    {
+      "id": "bcplace",
+      "stadium": "BC Place",
+      "city": "Vancouver",
+      "country": "Canada",
+      "capacity": 54000,
+      "lat": 49.2768,
+      "lng": -123.1119,
+      "tz": "America/Vancouver",
+      "accent": "#0a7abf"
+    },
+    {
+      "id": "metlife",
+      "stadium": "MetLife Stadium",
+      "city": "New York / New Jersey",
+      "country": "USA",
+      "capacity": 82500,
+      "lat": 40.8128,
+      "lng": -74.0742,
+      "tz": "America/New_York",
+      "accent": "#1f6feb"
+    },
+    {
+      "id": "gillette",
+      "stadium": "Gillette Stadium",
+      "city": "Boston",
+      "country": "USA",
+      "capacity": 65000,
+      "lat": 42.0909,
+      "lng": -71.2643,
+      "tz": "America/New_York",
+      "accent": "#13294b"
+    },
+    {
+      "id": "linc",
+      "stadium": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "country": "USA",
+      "capacity": 69000,
+      "lat": 39.9008,
+      "lng": -75.1675,
+      "tz": "America/New_York",
+      "accent": "#004c54"
+    },
+    {
+      "id": "hardrock",
+      "stadium": "Hard Rock Stadium",
+      "city": "Miami",
+      "country": "USA",
+      "capacity": 65000,
+      "lat": 25.958,
+      "lng": -80.2389,
+      "tz": "America/New_York",
+      "accent": "#f58220"
+    },
+    {
+      "id": "mercedes",
+      "stadium": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "country": "USA",
+      "capacity": 75000,
+      "lat": 33.7553,
+      "lng": -84.4006,
+      "tz": "America/New_York",
+      "accent": "#a71930"
+    },
+    {
+      "id": "arrowhead",
+      "stadium": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "country": "USA",
+      "capacity": 73000,
+      "lat": 39.0489,
+      "lng": -94.4839,
+      "tz": "America/Chicago",
+      "accent": "#e31837"
+    },
+    {
+      "id": "att",
+      "stadium": "AT&T Stadium",
+      "city": "Dallas",
+      "country": "USA",
+      "capacity": 94000,
+      "lat": 32.7473,
+      "lng": -97.0945,
+      "tz": "America/Chicago",
+      "accent": "#0b2265"
+    },
+    {
+      "id": "nrg",
+      "stadium": "NRG Stadium",
+      "city": "Houston",
+      "country": "USA",
+      "capacity": 72000,
+      "lat": 29.6847,
+      "lng": -95.4107,
+      "tz": "America/Chicago",
+      "accent": "#03202f"
+    },
+    {
+      "id": "lumen",
+      "stadium": "Lumen Field",
+      "city": "Seattle",
+      "country": "USA",
+      "capacity": 69000,
+      "lat": 47.5952,
+      "lng": -122.3316,
+      "tz": "America/Los_Angeles",
+      "accent": "#69be28"
+    },
+    {
+      "id": "levis",
+      "stadium": "Levi's Stadium",
+      "city": "San Francisco Bay Area",
+      "country": "USA",
+      "capacity": 71000,
+      "lat": 37.403,
+      "lng": -121.9698,
+      "tz": "America/Los_Angeles",
+      "accent": "#aa0000"
+    },
+    {
+      "id": "sofi",
+      "stadium": "SoFi Stadium",
+      "city": "Los Angeles",
+      "country": "USA",
+      "capacity": 70000,
+      "lat": 33.9535,
+      "lng": -118.3392,
+      "tz": "America/Los_Angeles",
+      "accent": "#7c3aed"
+    }
+  ],
+  "teams": [
+    {
+      "id": "mex",
+      "name": "Mexico",
+      "code": "MEX",
+      "flag": "🇲🇽",
+      "confederation": "CONCACAF",
+      "groupId": "A"
+    },
+    {
+      "id": "rsa",
+      "name": "South Africa",
+      "code": "RSA",
+      "flag": "🇿🇦",
+      "confederation": "CAF",
+      "groupId": "A"
+    },
+    {
+      "id": "kor",
+      "name": "South Korea",
+      "code": "KOR",
+      "flag": "🇰🇷",
+      "confederation": "AFC",
+      "groupId": "A"
+    },
+    {
+      "id": "cze",
+      "name": "Czechia",
+      "code": "CZE",
+      "flag": "🇨🇿",
+      "confederation": "UEFA",
+      "groupId": "A"
+    },
+    {
+      "id": "can",
+      "name": "Canada",
+      "code": "CAN",
+      "flag": "🇨🇦",
+      "confederation": "CONCACAF",
+      "groupId": "B"
+    },
+    {
+      "id": "bih",
+      "name": "Bosnia and Herzegovina",
+      "code": "BIH",
+      "flag": "🇧🇦",
+      "confederation": "UEFA",
+      "groupId": "B"
+    },
+    {
+      "id": "qat",
+      "name": "Qatar",
+      "code": "QAT",
+      "flag": "🇶🇦",
+      "confederation": "AFC",
+      "groupId": "B"
+    },
+    {
+      "id": "sui",
+      "name": "Switzerland",
+      "code": "SUI",
+      "flag": "🇨🇭",
+      "confederation": "UEFA",
+      "groupId": "B"
+    },
+    {
+      "id": "bra",
+      "name": "Brazil",
+      "code": "BRA",
+      "flag": "🇧🇷",
+      "confederation": "CONMEBOL",
+      "groupId": "C"
+    },
+    {
+      "id": "mar",
+      "name": "Morocco",
+      "code": "MAR",
+      "flag": "🇲🇦",
+      "confederation": "CAF",
+      "groupId": "C"
+    },
+    {
+      "id": "hai",
+      "name": "Haiti",
+      "code": "HAI",
+      "flag": "🇭🇹",
+      "confederation": "CONCACAF",
+      "groupId": "C"
+    },
+    {
+      "id": "sco",
+      "name": "Scotland",
+      "code": "SCO",
+      "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+      "confederation": "UEFA",
+      "groupId": "C"
+    },
+    {
+      "id": "usa",
+      "name": "United States",
+      "code": "USA",
+      "flag": "🇺🇸",
+      "confederation": "CONCACAF",
+      "groupId": "D"
+    },
+    {
+      "id": "par",
+      "name": "Paraguay",
+      "code": "PAR",
+      "flag": "🇵🇾",
+      "confederation": "CONMEBOL",
+      "groupId": "D"
+    },
+    {
+      "id": "aus",
+      "name": "Australia",
+      "code": "AUS",
+      "flag": "🇦🇺",
+      "confederation": "AFC",
+      "groupId": "D"
+    },
+    {
+      "id": "tur",
+      "name": "Turkiye",
+      "code": "TUR",
+      "flag": "🇹🇷",
+      "confederation": "UEFA",
+      "groupId": "D"
+    },
+    {
+      "id": "ger",
+      "name": "Germany",
+      "code": "GER",
+      "flag": "🇩🇪",
+      "confederation": "UEFA",
+      "groupId": "E"
+    },
+    {
+      "id": "cuw",
+      "name": "Curacao",
+      "code": "CUW",
+      "flag": "🇨🇼",
+      "confederation": "CONCACAF",
+      "groupId": "E"
+    },
+    {
+      "id": "civ",
+      "name": "Ivory Coast",
+      "code": "CIV",
+      "flag": "🇨🇮",
+      "confederation": "CAF",
+      "groupId": "E"
+    },
+    {
+      "id": "ecu",
+      "name": "Ecuador",
+      "code": "ECU",
+      "flag": "🇪🇨",
+      "confederation": "CONMEBOL",
+      "groupId": "E"
+    },
+    {
+      "id": "ned",
+      "name": "Netherlands",
+      "code": "NED",
+      "flag": "🇳🇱",
+      "confederation": "UEFA",
+      "groupId": "F"
+    },
+    {
+      "id": "jpn",
+      "name": "Japan",
+      "code": "JPN",
+      "flag": "🇯🇵",
+      "confederation": "AFC",
+      "groupId": "F"
+    },
+    {
+      "id": "swe",
+      "name": "Sweden",
+      "code": "SWE",
+      "flag": "🇸🇪",
+      "confederation": "UEFA",
+      "groupId": "F"
+    },
+    {
+      "id": "tun",
+      "name": "Tunisia",
+      "code": "TUN",
+      "flag": "🇹🇳",
+      "confederation": "CAF",
+      "groupId": "F"
+    },
+    {
+      "id": "bel",
+      "name": "Belgium",
+      "code": "BEL",
+      "flag": "🇧🇪",
+      "confederation": "UEFA",
+      "groupId": "G"
+    },
+    {
+      "id": "egy",
+      "name": "Egypt",
+      "code": "EGY",
+      "flag": "🇪🇬",
+      "confederation": "CAF",
+      "groupId": "G"
+    },
+    {
+      "id": "irn",
+      "name": "Iran",
+      "code": "IRN",
+      "flag": "🇮🇷",
+      "confederation": "AFC",
+      "groupId": "G"
+    },
+    {
+      "id": "nzl",
+      "name": "New Zealand",
+      "code": "NZL",
+      "flag": "🇳🇿",
+      "confederation": "OFC",
+      "groupId": "G"
+    },
+    {
+      "id": "esp",
+      "name": "Spain",
+      "code": "ESP",
+      "flag": "🇪🇸",
+      "confederation": "UEFA",
+      "groupId": "H"
+    },
+    {
+      "id": "cpv",
+      "name": "Cape Verde",
+      "code": "CPV",
+      "flag": "🇨🇻",
+      "confederation": "CAF",
+      "groupId": "H"
+    },
+    {
+      "id": "ksa",
+      "name": "Saudi Arabia",
+      "code": "KSA",
+      "flag": "🇸🇦",
+      "confederation": "AFC",
+      "groupId": "H"
+    },
+    {
+      "id": "uru",
+      "name": "Uruguay",
+      "code": "URU",
+      "flag": "🇺🇾",
+      "confederation": "CONMEBOL",
+      "groupId": "H"
+    },
+    {
+      "id": "fra",
+      "name": "France",
+      "code": "FRA",
+      "flag": "🇫🇷",
+      "confederation": "UEFA",
+      "groupId": "I"
+    },
+    {
+      "id": "sen",
+      "name": "Senegal",
+      "code": "SEN",
+      "flag": "🇸🇳",
+      "confederation": "CAF",
+      "groupId": "I"
+    },
+    {
+      "id": "irq",
+      "name": "Iraq",
+      "code": "IRQ",
+      "flag": "🇮🇶",
+      "confederation": "AFC",
+      "groupId": "I"
+    },
+    {
+      "id": "nor",
+      "name": "Norway",
+      "code": "NOR",
+      "flag": "🇳🇴",
+      "confederation": "UEFA",
+      "groupId": "I"
+    },
+    {
+      "id": "arg",
+      "name": "Argentina",
+      "code": "ARG",
+      "flag": "🇦🇷",
+      "confederation": "CONMEBOL",
+      "groupId": "J"
+    },
+    {
+      "id": "alg",
+      "name": "Algeria",
+      "code": "ALG",
+      "flag": "🇩🇿",
+      "confederation": "CAF",
+      "groupId": "J"
+    },
+    {
+      "id": "aut",
+      "name": "Austria",
+      "code": "AUT",
+      "flag": "🇦🇹",
+      "confederation": "UEFA",
+      "groupId": "J"
+    },
+    {
+      "id": "jor",
+      "name": "Jordan",
+      "code": "JOR",
+      "flag": "🇯🇴",
+      "confederation": "AFC",
+      "groupId": "J"
+    },
+    {
+      "id": "por",
+      "name": "Portugal",
+      "code": "POR",
+      "flag": "🇵🇹",
+      "confederation": "UEFA",
+      "groupId": "K"
+    },
+    {
+      "id": "cod",
+      "name": "DR Congo",
+      "code": "COD",
+      "flag": "🇨🇩",
+      "confederation": "CAF",
+      "groupId": "K"
+    },
+    {
+      "id": "uzb",
+      "name": "Uzbekistan",
+      "code": "UZB",
+      "flag": "🇺🇿",
+      "confederation": "AFC",
+      "groupId": "K"
+    },
+    {
+      "id": "col",
+      "name": "Colombia",
+      "code": "COL",
+      "flag": "🇨🇴",
+      "confederation": "CONMEBOL",
+      "groupId": "K"
+    },
+    {
+      "id": "eng",
+      "name": "England",
+      "code": "ENG",
+      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "confederation": "UEFA",
+      "groupId": "L"
+    },
+    {
+      "id": "cro",
+      "name": "Croatia",
+      "code": "CRO",
+      "flag": "🇭🇷",
+      "confederation": "UEFA",
+      "groupId": "L"
+    },
+    {
+      "id": "gha",
+      "name": "Ghana",
+      "code": "GHA",
+      "flag": "🇬🇭",
+      "confederation": "CAF",
+      "groupId": "L"
+    },
+    {
+      "id": "pan",
+      "name": "Panama",
+      "code": "PAN",
+      "flag": "🇵🇦",
+      "confederation": "CONCACAF",
+      "groupId": "L"
+    }
+  ],
+  "groups": [
+    {
+      "id": "A",
+      "name": "Group A",
+      "teamIds": [
+        "mex",
+        "rsa",
+        "kor",
+        "cze"
+      ]
+    },
+    {
+      "id": "B",
+      "name": "Group B",
+      "teamIds": [
+        "can",
+        "bih",
+        "qat",
+        "sui"
+      ]
+    },
+    {
+      "id": "C",
+      "name": "Group C",
+      "teamIds": [
+        "bra",
+        "mar",
+        "hai",
+        "sco"
+      ]
+    },
+    {
+      "id": "D",
+      "name": "Group D",
+      "teamIds": [
+        "usa",
+        "par",
+        "aus",
+        "tur"
+      ]
+    },
+    {
+      "id": "E",
+      "name": "Group E",
+      "teamIds": [
+        "ger",
+        "cuw",
+        "civ",
+        "ecu"
+      ]
+    },
+    {
+      "id": "F",
+      "name": "Group F",
+      "teamIds": [
+        "ned",
+        "jpn",
+        "swe",
+        "tun"
+      ]
+    },
+    {
+      "id": "G",
+      "name": "Group G",
+      "teamIds": [
+        "bel",
+        "egy",
+        "irn",
+        "nzl"
+      ]
+    },
+    {
+      "id": "H",
+      "name": "Group H",
+      "teamIds": [
+        "esp",
+        "cpv",
+        "ksa",
+        "uru"
+      ]
+    },
+    {
+      "id": "I",
+      "name": "Group I",
+      "teamIds": [
+        "fra",
+        "sen",
+        "irq",
+        "nor"
+      ]
+    },
+    {
+      "id": "J",
+      "name": "Group J",
+      "teamIds": [
+        "arg",
+        "alg",
+        "aut",
+        "jor"
+      ]
+    },
+    {
+      "id": "K",
+      "name": "Group K",
+      "teamIds": [
+        "por",
+        "cod",
+        "uzb",
+        "col"
+      ]
+    },
+    {
+      "id": "L",
+      "name": "Group L",
+      "teamIds": [
+        "eng",
+        "cro",
+        "gha",
+        "pan"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "id": "M01",
+      "matchNumber": 1,
+      "stage": "group",
+      "groupId": "A",
+      "venueId": "azteca",
+      "kickoff": "2026-06-11T19:00:00.000Z",
+      "homeTeamId": "mex",
+      "awayTeamId": "rsa",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M02",
+      "matchNumber": 2,
+      "stage": "group",
+      "groupId": "A",
+      "venueId": "akron",
+      "kickoff": "2026-06-12T02:00:00.000Z",
+      "homeTeamId": "kor",
+      "awayTeamId": "cze",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M03",
+      "matchNumber": 3,
+      "stage": "group",
+      "groupId": "B",
+      "venueId": "bmo",
+      "kickoff": "2026-06-12T19:00:00.000Z",
+      "homeTeamId": "can",
+      "awayTeamId": "bih",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M04",
+      "matchNumber": 4,
+      "stage": "group",
+      "groupId": "D",
+      "venueId": "sofi",
+      "kickoff": "2026-06-13T01:00:00.000Z",
+      "homeTeamId": "usa",
+      "awayTeamId": "par",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M05",
+      "matchNumber": 5,
+      "stage": "group",
+      "groupId": "B",
+      "venueId": "levis",
+      "kickoff": "2026-06-13T19:00:00.000Z",
+      "homeTeamId": "qat",
+      "awayTeamId": "sui",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M06",
+      "matchNumber": 6,
+      "stage": "group",
+      "groupId": "C",
+      "venueId": "metlife",
+      "kickoff": "2026-06-13T22:00:00.000Z",
+      "homeTeamId": "bra",
+      "awayTeamId": "mar",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M07",
+      "matchNumber": 7,
+      "stage": "group",
+      "groupId": "C",
+      "venueId": "gillette",
+      "kickoff": "2026-06-14T01:00:00.000Z",
+      "homeTeamId": "hai",
+      "awayTeamId": "sco",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M08",
+      "matchNumber": 8,
+      "stage": "group",
+      "groupId": "D",
+      "venueId": "bcplace",
+      "kickoff": "2026-06-14T04:00:00.000Z",
+      "homeTeamId": "aus",
+      "awayTeamId": "tur",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M09",
+      "matchNumber": 9,
+      "stage": "group",
+      "groupId": "E",
+      "venueId": "nrg",
+      "kickoff": "2026-06-14T17:00:00.000Z",
+      "homeTeamId": "ger",
+      "awayTeamId": "cuw",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M10",
+      "matchNumber": 10,
+      "stage": "group",
+      "groupId": "E",
+      "venueId": "linc",
+      "kickoff": "2026-06-14T23:00:00.000Z",
+      "homeTeamId": "civ",
+      "awayTeamId": "ecu",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M11",
+      "matchNumber": 11,
+      "stage": "group",
+      "groupId": "F",
+      "venueId": "att",
+      "kickoff": "2026-06-14T20:00:00.000Z",
+      "homeTeamId": "ned",
+      "awayTeamId": "jpn",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M12",
+      "matchNumber": 12,
+      "stage": "group",
+      "groupId": "F",
+      "venueId": "bbva",
+      "kickoff": "2026-06-15T02:00:00.000Z",
+      "homeTeamId": "swe",
+      "awayTeamId": "tun",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M13",
+      "matchNumber": 13,
+      "stage": "group",
+      "groupId": "G",
+      "venueId": "sofi",
+      "kickoff": "2026-06-16T01:00:00.000Z",
+      "homeTeamId": "irn",
+      "awayTeamId": "nzl",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M14",
+      "matchNumber": 14,
+      "stage": "group",
+      "groupId": "G",
+      "venueId": "lumen",
+      "kickoff": "2026-06-15T19:00:00.000Z",
+      "homeTeamId": "bel",
+      "awayTeamId": "egy",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M15",
+      "matchNumber": 15,
+      "stage": "group",
+      "groupId": "H",
+      "venueId": "mercedes",
+      "kickoff": "2026-06-15T16:00:00.000Z",
+      "homeTeamId": "esp",
+      "awayTeamId": "cpv",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M16",
+      "matchNumber": 16,
+      "stage": "group",
+      "groupId": "H",
+      "venueId": "hardrock",
+      "kickoff": "2026-06-15T22:00:00.000Z",
+      "homeTeamId": "ksa",
+      "awayTeamId": "uru",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M17",
+      "matchNumber": 17,
+      "stage": "group",
+      "groupId": "I",
+      "venueId": "metlife",
+      "kickoff": "2026-06-16T19:00:00.000Z",
+      "homeTeamId": "fra",
+      "awayTeamId": "sen",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M18",
+      "matchNumber": 18,
+      "stage": "group",
+      "groupId": "I",
+      "venueId": "gillette",
+      "kickoff": "2026-06-16T22:00:00.000Z",
+      "homeTeamId": "irq",
+      "awayTeamId": "nor",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M19",
+      "matchNumber": 19,
+      "stage": "group",
+      "groupId": "J",
+      "venueId": "arrowhead",
+      "kickoff": "2026-06-17T01:00:00.000Z",
+      "homeTeamId": "arg",
+      "awayTeamId": "alg",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M20",
+      "matchNumber": 20,
+      "stage": "group",
+      "groupId": "J",
+      "venueId": "levis",
+      "kickoff": "2026-06-17T04:00:00.000Z",
+      "homeTeamId": "aut",
+      "awayTeamId": "jor",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M21",
+      "matchNumber": 21,
+      "stage": "group",
+      "groupId": "K",
+      "venueId": "nrg",
+      "kickoff": "2026-06-17T17:00:00.000Z",
+      "homeTeamId": "por",
+      "awayTeamId": "cod",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M22",
+      "matchNumber": 22,
+      "stage": "group",
+      "groupId": "K",
+      "venueId": "azteca",
+      "kickoff": "2026-06-18T02:00:00.000Z",
+      "homeTeamId": "uzb",
+      "awayTeamId": "col",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M23",
+      "matchNumber": 23,
+      "stage": "group",
+      "groupId": "L",
+      "venueId": "att",
+      "kickoff": "2026-06-17T20:00:00.000Z",
+      "homeTeamId": "eng",
+      "awayTeamId": "cro",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M24",
+      "matchNumber": 24,
+      "stage": "group",
+      "groupId": "L",
+      "venueId": "bmo",
+      "kickoff": "2026-06-17T23:00:00.000Z",
+      "homeTeamId": "gha",
+      "awayTeamId": "pan",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M25",
+      "matchNumber": 25,
+      "stage": "group",
+      "groupId": "A",
+      "venueId": "mercedes",
+      "kickoff": "2026-06-18T16:00:00.000Z",
+      "homeTeamId": "cze",
+      "awayTeamId": "rsa",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M26",
+      "matchNumber": 26,
+      "stage": "group",
+      "groupId": "A",
+      "venueId": "akron",
+      "kickoff": "2026-06-19T01:00:00.000Z",
+      "homeTeamId": "mex",
+      "awayTeamId": "kor",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M27",
+      "matchNumber": 27,
+      "stage": "group",
+      "groupId": "B",
+      "venueId": "sofi",
+      "kickoff": "2026-06-18T19:00:00.000Z",
+      "homeTeamId": "sui",
+      "awayTeamId": "bih",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M28",
+      "matchNumber": 28,
+      "stage": "group",
+      "groupId": "B",
+      "venueId": "bcplace",
+      "kickoff": "2026-06-18T22:00:00.000Z",
+      "homeTeamId": "can",
+      "awayTeamId": "qat",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M29",
+      "matchNumber": 29,
+      "stage": "group",
+      "groupId": "C",
+      "venueId": "gillette",
+      "kickoff": "2026-06-19T22:00:00.000Z",
+      "homeTeamId": "sco",
+      "awayTeamId": "mar",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M30",
+      "matchNumber": 30,
+      "stage": "group",
+      "groupId": "C",
+      "venueId": "linc",
+      "kickoff": "2026-06-20T01:00:00.000Z",
+      "homeTeamId": "bra",
+      "awayTeamId": "hai",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M31",
+      "matchNumber": 31,
+      "stage": "group",
+      "groupId": "D",
+      "venueId": "lumen",
+      "kickoff": "2026-06-19T19:00:00.000Z",
+      "homeTeamId": "usa",
+      "awayTeamId": "aus",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M32",
+      "matchNumber": 32,
+      "stage": "group",
+      "groupId": "D",
+      "venueId": "levis",
+      "kickoff": "2026-06-20T04:00:00.000Z",
+      "homeTeamId": "tur",
+      "awayTeamId": "par",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M33",
+      "matchNumber": 33,
+      "stage": "group",
+      "groupId": "E",
+      "venueId": "bmo",
+      "kickoff": "2026-06-20T20:00:00.000Z",
+      "homeTeamId": "ger",
+      "awayTeamId": "civ",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M34",
+      "matchNumber": 34,
+      "stage": "group",
+      "groupId": "E",
+      "venueId": "arrowhead",
+      "kickoff": "2026-06-21T00:00:00.000Z",
+      "homeTeamId": "ecu",
+      "awayTeamId": "cuw",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M35",
+      "matchNumber": 35,
+      "stage": "group",
+      "groupId": "F",
+      "venueId": "nrg",
+      "kickoff": "2026-06-20T17:00:00.000Z",
+      "homeTeamId": "ned",
+      "awayTeamId": "swe",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M36",
+      "matchNumber": 36,
+      "stage": "group",
+      "groupId": "F",
+      "venueId": "bbva",
+      "kickoff": "2026-06-21T04:00:00.000Z",
+      "homeTeamId": "tun",
+      "awayTeamId": "jpn",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M37",
+      "matchNumber": 37,
+      "stage": "group",
+      "groupId": "G",
+      "venueId": "sofi",
+      "kickoff": "2026-06-21T19:00:00.000Z",
+      "homeTeamId": "bel",
+      "awayTeamId": "irn",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M38",
+      "matchNumber": 38,
+      "stage": "group",
+      "groupId": "G",
+      "venueId": "bcplace",
+      "kickoff": "2026-06-22T01:00:00.000Z",
+      "homeTeamId": "nzl",
+      "awayTeamId": "egy",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M39",
+      "matchNumber": 39,
+      "stage": "group",
+      "groupId": "H",
+      "venueId": "mercedes",
+      "kickoff": "2026-06-21T16:00:00.000Z",
+      "homeTeamId": "esp",
+      "awayTeamId": "ksa",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M40",
+      "matchNumber": 40,
+      "stage": "group",
+      "groupId": "H",
+      "venueId": "hardrock",
+      "kickoff": "2026-06-21T22:00:00.000Z",
+      "homeTeamId": "uru",
+      "awayTeamId": "cpv",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M41",
+      "matchNumber": 41,
+      "stage": "group",
+      "groupId": "I",
+      "venueId": "linc",
+      "kickoff": "2026-06-22T21:00:00.000Z",
+      "homeTeamId": "fra",
+      "awayTeamId": "irq",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M42",
+      "matchNumber": 42,
+      "stage": "group",
+      "groupId": "I",
+      "venueId": "metlife",
+      "kickoff": "2026-06-23T00:00:00.000Z",
+      "homeTeamId": "nor",
+      "awayTeamId": "sen",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M43",
+      "matchNumber": 43,
+      "stage": "group",
+      "groupId": "J",
+      "venueId": "att",
+      "kickoff": "2026-06-22T17:00:00.000Z",
+      "homeTeamId": "arg",
+      "awayTeamId": "aut",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M44",
+      "matchNumber": 44,
+      "stage": "group",
+      "groupId": "J",
+      "venueId": "levis",
+      "kickoff": "2026-06-23T03:00:00.000Z",
+      "homeTeamId": "jor",
+      "awayTeamId": "alg",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M45",
+      "matchNumber": 45,
+      "stage": "group",
+      "groupId": "K",
+      "venueId": "nrg",
+      "kickoff": "2026-06-23T17:00:00.000Z",
+      "homeTeamId": "por",
+      "awayTeamId": "uzb",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M46",
+      "matchNumber": 46,
+      "stage": "group",
+      "groupId": "K",
+      "venueId": "akron",
+      "kickoff": "2026-06-24T02:00:00.000Z",
+      "homeTeamId": "col",
+      "awayTeamId": "cod",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M47",
+      "matchNumber": 47,
+      "stage": "group",
+      "groupId": "L",
+      "venueId": "gillette",
+      "kickoff": "2026-06-23T20:00:00.000Z",
+      "homeTeamId": "eng",
+      "awayTeamId": "gha",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M48",
+      "matchNumber": 48,
+      "stage": "group",
+      "groupId": "L",
+      "venueId": "bmo",
+      "kickoff": "2026-06-23T23:00:00.000Z",
+      "homeTeamId": "pan",
+      "awayTeamId": "cro",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M49",
+      "matchNumber": 49,
+      "stage": "group",
+      "groupId": "A",
+      "venueId": "azteca",
+      "kickoff": "2026-06-25T01:00:00.000Z",
+      "homeTeamId": "cze",
+      "awayTeamId": "mex",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M50",
+      "matchNumber": 50,
+      "stage": "group",
+      "groupId": "A",
+      "venueId": "bbva",
+      "kickoff": "2026-06-25T01:00:00.000Z",
+      "homeTeamId": "rsa",
+      "awayTeamId": "kor",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M51",
+      "matchNumber": 51,
+      "stage": "group",
+      "groupId": "B",
+      "venueId": "bcplace",
+      "kickoff": "2026-06-24T19:00:00.000Z",
+      "homeTeamId": "sui",
+      "awayTeamId": "can",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M52",
+      "matchNumber": 52,
+      "stage": "group",
+      "groupId": "B",
+      "venueId": "lumen",
+      "kickoff": "2026-06-24T19:00:00.000Z",
+      "homeTeamId": "bih",
+      "awayTeamId": "qat",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M53",
+      "matchNumber": 53,
+      "stage": "group",
+      "groupId": "C",
+      "venueId": "hardrock",
+      "kickoff": "2026-06-24T22:00:00.000Z",
+      "homeTeamId": "sco",
+      "awayTeamId": "bra",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M54",
+      "matchNumber": 54,
+      "stage": "group",
+      "groupId": "C",
+      "venueId": "mercedes",
+      "kickoff": "2026-06-24T22:00:00.000Z",
+      "homeTeamId": "mar",
+      "awayTeamId": "hai",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M55",
+      "matchNumber": 55,
+      "stage": "group",
+      "groupId": "E",
+      "venueId": "metlife",
+      "kickoff": "2026-06-25T20:00:00.000Z",
+      "homeTeamId": "ecu",
+      "awayTeamId": "ger",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M56",
+      "matchNumber": 56,
+      "stage": "group",
+      "groupId": "E",
+      "venueId": "linc",
+      "kickoff": "2026-06-25T20:00:00.000Z",
+      "homeTeamId": "cuw",
+      "awayTeamId": "civ",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M57",
+      "matchNumber": 57,
+      "stage": "group",
+      "groupId": "D",
+      "venueId": "sofi",
+      "kickoff": "2026-06-26T02:00:00.000Z",
+      "homeTeamId": "tur",
+      "awayTeamId": "usa",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M58",
+      "matchNumber": 58,
+      "stage": "group",
+      "groupId": "D",
+      "venueId": "levis",
+      "kickoff": "2026-06-26T02:00:00.000Z",
+      "homeTeamId": "par",
+      "awayTeamId": "aus",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M59",
+      "matchNumber": 59,
+      "stage": "group",
+      "groupId": "F",
+      "venueId": "att",
+      "kickoff": "2026-06-25T23:00:00.000Z",
+      "homeTeamId": "jpn",
+      "awayTeamId": "swe",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M60",
+      "matchNumber": 60,
+      "stage": "group",
+      "groupId": "F",
+      "venueId": "arrowhead",
+      "kickoff": "2026-06-25T23:00:00.000Z",
+      "homeTeamId": "tun",
+      "awayTeamId": "ned",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M61",
+      "matchNumber": 61,
+      "stage": "group",
+      "groupId": "G",
+      "venueId": "lumen",
+      "kickoff": "2026-06-27T03:00:00.000Z",
+      "homeTeamId": "egy",
+      "awayTeamId": "irn",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M62",
+      "matchNumber": 62,
+      "stage": "group",
+      "groupId": "G",
+      "venueId": "bcplace",
+      "kickoff": "2026-06-27T03:00:00.000Z",
+      "homeTeamId": "nzl",
+      "awayTeamId": "bel",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M63",
+      "matchNumber": 63,
+      "stage": "group",
+      "groupId": "H",
+      "venueId": "nrg",
+      "kickoff": "2026-06-27T00:00:00.000Z",
+      "homeTeamId": "cpv",
+      "awayTeamId": "ksa",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M64",
+      "matchNumber": 64,
+      "stage": "group",
+      "groupId": "H",
+      "venueId": "akron",
+      "kickoff": "2026-06-27T00:00:00.000Z",
+      "homeTeamId": "uru",
+      "awayTeamId": "esp",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M65",
+      "matchNumber": 65,
+      "stage": "group",
+      "groupId": "I",
+      "venueId": "gillette",
+      "kickoff": "2026-06-26T19:00:00.000Z",
+      "homeTeamId": "nor",
+      "awayTeamId": "fra",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M66",
+      "matchNumber": 66,
+      "stage": "group",
+      "groupId": "I",
+      "venueId": "bmo",
+      "kickoff": "2026-06-26T19:00:00.000Z",
+      "homeTeamId": "sen",
+      "awayTeamId": "irq",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M67",
+      "matchNumber": 67,
+      "stage": "group",
+      "groupId": "J",
+      "venueId": "arrowhead",
+      "kickoff": "2026-06-28T02:00:00.000Z",
+      "homeTeamId": "alg",
+      "awayTeamId": "aut",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M68",
+      "matchNumber": 68,
+      "stage": "group",
+      "groupId": "J",
+      "venueId": "att",
+      "kickoff": "2026-06-28T02:00:00.000Z",
+      "homeTeamId": "jor",
+      "awayTeamId": "arg",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M69",
+      "matchNumber": 69,
+      "stage": "group",
+      "groupId": "K",
+      "venueId": "hardrock",
+      "kickoff": "2026-06-27T23:30:00.000Z",
+      "homeTeamId": "col",
+      "awayTeamId": "por",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M70",
+      "matchNumber": 70,
+      "stage": "group",
+      "groupId": "K",
+      "venueId": "mercedes",
+      "kickoff": "2026-06-27T23:30:00.000Z",
+      "homeTeamId": "cod",
+      "awayTeamId": "uzb",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M71",
+      "matchNumber": 71,
+      "stage": "group",
+      "groupId": "L",
+      "venueId": "metlife",
+      "kickoff": "2026-06-27T21:00:00.000Z",
+      "homeTeamId": "pan",
+      "awayTeamId": "eng",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "M72",
+      "matchNumber": 72,
+      "stage": "group",
+      "groupId": "L",
+      "venueId": "linc",
+      "kickoff": "2026-06-27T21:00:00.000Z",
+      "homeTeamId": "cro",
+      "awayTeamId": "gha",
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "R32-1",
+      "matchNumber": 73,
+      "stage": "r32",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-06-28T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": "1A",
+      "awayLabel": "3rd (C/E/F/H)",
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": null
+    },
+    {
+      "id": "R32-2",
+      "matchNumber": 74,
+      "stage": "r32",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-06-29T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": "1C",
+      "awayLabel": "3rd (D/E/I/J/L)",
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": null
+    },
+    {
+      "id": "R32-3",
+      "matchNumber": 75,
+      "stage": "r32",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-06-29T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": "1E",
+      "awayLabel": "3rd (A/B/F/I)",
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": null
+    },
+    {
+      "id": "R32-4",
+      "matchNumber": 76,
+      "stage": "r32",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-06-30T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": "2A",
+      "awayLabel": "2B",
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": null
+    },
+    {
+      "id": "R32-5",
+      "matchNumber": 77,
+      "stage": "r32",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-06-30T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": "1F",
+      "awayLabel": "2C",
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": null
+    },
+    {
+      "id": "R32-6",
+      "matchNumber": 78,
+      "stage": "r32",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-01T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": "1I",
+      "awayLabel": "2D",
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": null
+    },
+    {
+      "id": "R32-7",
+      "matchNumber": 79,
+      "stage": "r32",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-01T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": "1B",
+      "awayLabel": "3rd (E/H/I/J/K)",
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": null
+    },
+    {
+      "id": "R32-8",
+      "matchNumber": 80,
+      "stage": "r32",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-02T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": "1D",
+      "awayLabel": "3rd (B/E/F/I/J)",
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": null
+    },
+    {
+      "id": "R32-9",
+      "matchNumber": 81,
+      "stage": "r32",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-06-28T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": "1G",
+      "awayLabel": "3rd (A/E/H/I/J)",
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": null
+    },
+    {
+      "id": "R32-10",
+      "matchNumber": 82,
+      "stage": "r32",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-06-29T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": "2E",
+      "awayLabel": "2F",
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": null
+    },
+    {
+      "id": "R32-11",
+      "matchNumber": 83,
+      "stage": "r32",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-06-30T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": "1H",
+      "awayLabel": "2J",
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": null
+    },
+    {
+      "id": "R32-12",
+      "matchNumber": 84,
+      "stage": "r32",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-01T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": "1K",
+      "awayLabel": "2L",
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": null
+    },
+    {
+      "id": "R32-13",
+      "matchNumber": 85,
+      "stage": "r32",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-02T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": "1J",
+      "awayLabel": "3rd (C/D/F/G/H)",
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": null
+    },
+    {
+      "id": "R32-14",
+      "matchNumber": 86,
+      "stage": "r32",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-02T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": "1L",
+      "awayLabel": "3rd (A/B/C/D/G)",
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": null
+    },
+    {
+      "id": "R32-15",
+      "matchNumber": 87,
+      "stage": "r32",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-03T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": "2G",
+      "awayLabel": "2H",
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": null
+    },
+    {
+      "id": "R32-16",
+      "matchNumber": 88,
+      "stage": "r32",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-03T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": "2I",
+      "awayLabel": "2K",
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": null
+    },
+    {
+      "id": "R16-1",
+      "matchNumber": 89,
+      "stage": "r16",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-04T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": {
+        "home": {
+          "winnerOf": "R32-1"
+        },
+        "away": {
+          "winnerOf": "R32-2"
+        }
+      }
+    },
+    {
+      "id": "R16-2",
+      "matchNumber": 90,
+      "stage": "r16",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-04T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": {
+        "home": {
+          "winnerOf": "R32-3"
+        },
+        "away": {
+          "winnerOf": "R32-4"
+        }
+      }
+    },
+    {
+      "id": "R16-3",
+      "matchNumber": 91,
+      "stage": "r16",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-05T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": {
+        "home": {
+          "winnerOf": "R32-5"
+        },
+        "away": {
+          "winnerOf": "R32-6"
+        }
+      }
+    },
+    {
+      "id": "R16-4",
+      "matchNumber": 92,
+      "stage": "r16",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-05T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": {
+        "home": {
+          "winnerOf": "R32-7"
+        },
+        "away": {
+          "winnerOf": "R32-8"
+        }
+      }
+    },
+    {
+      "id": "R16-5",
+      "matchNumber": 93,
+      "stage": "r16",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-06T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": {
+        "home": {
+          "winnerOf": "R32-9"
+        },
+        "away": {
+          "winnerOf": "R32-10"
+        }
+      }
+    },
+    {
+      "id": "R16-6",
+      "matchNumber": 94,
+      "stage": "r16",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-06T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": {
+        "home": {
+          "winnerOf": "R32-11"
+        },
+        "away": {
+          "winnerOf": "R32-12"
+        }
+      }
+    },
+    {
+      "id": "R16-7",
+      "matchNumber": 95,
+      "stage": "r16",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-07T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": {
+        "home": {
+          "winnerOf": "R32-13"
+        },
+        "away": {
+          "winnerOf": "R32-14"
+        }
+      }
+    },
+    {
+      "id": "R16-8",
+      "matchNumber": 96,
+      "stage": "r16",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-07T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": {
+        "home": {
+          "winnerOf": "R32-15"
+        },
+        "away": {
+          "winnerOf": "R32-16"
+        }
+      }
+    },
+    {
+      "id": "QF-1",
+      "matchNumber": 97,
+      "stage": "qf",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-09T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": {
+        "home": {
+          "winnerOf": "R16-1"
+        },
+        "away": {
+          "winnerOf": "R16-2"
+        }
+      }
+    },
+    {
+      "id": "QF-2",
+      "matchNumber": 98,
+      "stage": "qf",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-10T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": {
+        "home": {
+          "winnerOf": "R16-3"
+        },
+        "away": {
+          "winnerOf": "R16-4"
+        }
+      }
+    },
+    {
+      "id": "QF-3",
+      "matchNumber": 99,
+      "stage": "qf",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-11T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": {
+        "home": {
+          "winnerOf": "R16-5"
+        },
+        "away": {
+          "winnerOf": "R16-6"
+        }
+      }
+    },
+    {
+      "id": "QF-4",
+      "matchNumber": 100,
+      "stage": "qf",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-11T20:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": {
+        "home": {
+          "winnerOf": "R16-7"
+        },
+        "away": {
+          "winnerOf": "R16-8"
+        }
+      }
+    },
+    {
+      "id": "SF-1",
+      "matchNumber": 101,
+      "stage": "sf",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-14T19:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": {
+        "home": {
+          "winnerOf": "QF-1"
+        },
+        "away": {
+          "winnerOf": "QF-2"
+        }
+      }
+    },
+    {
+      "id": "SF-2",
+      "matchNumber": 102,
+      "stage": "sf",
+      "groupId": null,
+      "venueId": null,
+      "kickoff": "2026-07-15T19:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": {
+        "home": {
+          "winnerOf": "QF-3"
+        },
+        "away": {
+          "winnerOf": "QF-4"
+        }
+      }
+    },
+    {
+      "id": "TP",
+      "matchNumber": 103,
+      "stage": "third",
+      "groupId": null,
+      "venueId": "hardrock",
+      "kickoff": "2026-07-18T21:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": {
+        "home": {
+          "loserOf": "SF-1"
+        },
+        "away": {
+          "loserOf": "SF-2"
+        }
+      }
+    },
+    {
+      "id": "FINAL",
+      "matchNumber": 104,
+      "stage": "final",
+      "groupId": null,
+      "venueId": "metlife",
+      "kickoff": "2026-07-19T19:00:00.000Z",
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": null,
+      "awayLabel": null,
+      "status": "scheduled",
+      "homeScore": null,
+      "awayScore": null,
+      "feeders": {
+        "home": {
+          "winnerOf": "SF-1"
+        },
+        "away": {
+          "winnerOf": "SF-2"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "source": "Wikipedia (2026 FIFA World Cup, draw) + NBC Sports & Sky Sports schedule",
+    "sourceUrls": [
+      "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
+      "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_draw",
+      "https://www.nbcsports.com/soccer/news/2026-world-cup-schedule-confirmed-dates-times-stadiums-full-details"
+    ],
+    "crawledAt": "2026-06-07T00:00:00.000Z",
+    "version": "3ea5912ef793",
+    "schemaVersion": 1,
+    "notes": "Group stage is final (dates, kickoff times in venue-local via UTC, venues). Knockout matchups are structural placeholders until results are known."
+  }
+}

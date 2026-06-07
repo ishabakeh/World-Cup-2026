@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-pitch-950 text-ink font-sans antialiased;
+  background-image: radial-gradient(1200px 700px at 50% -15%, rgba(46, 66, 120, 0.5), transparent 60%),
+    radial-gradient(900px 600px at 92% 0%, rgba(233, 185, 73, 0.08), transparent 55%);
+  background-attachment: fixed;
+}
+
+/* Thin, dark scrollbars to keep the broadcast feel. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #243049 transparent;
+}
+*::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #243049;
+  border-radius: 999px;
+}
+
+@layer components {
+  .glass {
+    @apply rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-md shadow-glass;
+  }
+  .glass-hover {
+    @apply transition-all duration-200 hover:border-white/20 hover:bg-white/[0.07];
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-medium text-ink-muted;
+  }
+  .pill-active {
+    @apply border-gold/40 bg-gold/15 text-gold;
+  }
+  .h-display {
+    @apply font-display font-extrabold tracking-tight;
+  }
+  .card-press {
+    @apply transition-transform duration-150 active:scale-[0.98];
+  }
+}
+
+/* Shimmer skeleton */
+.skeleton {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 25%, rgba(255, 255, 255, 0.09) 37%, rgba(255, 255, 255, 0.04) 63%);
+  background-size: 200% 100%;
+  @apply animate-shimmer rounded-lg;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

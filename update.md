@@ -111,6 +111,14 @@ One row per stadium. Keep the `id` stable (the schedule + matches reference it).
   match's `groupId` from the team and **throws** if the two teams aren't in the
   same group — a built-in typo guard.
 
+### 4c-results. `RESULTS` (final scores)
+To record a finished group-stage match, add one line to the `RESULTS` object:
+`"Home|Away": [homeScore, awayScore]` — keys use the **exact** home/away names
+from the matching `SCHEDULE` row. The generator sets that match's status to
+`"finished"` and fills the scores; group standings then compute automatically.
+Example: `"Mexico|South Africa": [2, 0]`. Leave a match out of `RESULTS` until it
+has actually finished.
+
 ### 4d. Knockout bracket
 Structural placeholders (`r32`→`final` + third place) with seeding labels like
 `"1A"`, `"3rd (C/E/F/H)"`, and `feeders` linking `winnerOf`/`loserOf` earlier

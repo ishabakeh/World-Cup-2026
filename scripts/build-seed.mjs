@@ -158,6 +158,16 @@ function etToUtcIso(dateET, timeET) {
   return new Date(ms).toISOString();
 }
 
+// ---------------------------------------------------------------------------
+// RESULTS — final scores of completed group-stage matches.
+// Key: "Home|Away" exactly as written in SCHEDULE. Value: [homeScore, awayScore].
+// Add a line here as each match finishes; the generator marks it "finished".
+// ---------------------------------------------------------------------------
+const RESULTS = {
+  "Mexico|South Africa": [2, 0],
+  "South Korea|Czechia": [2, 1],
+};
+
 const matches = [];
 let n = 1;
 for (const [dateET, timeET, home, away, venueId] of SCHEDULE) {
@@ -166,6 +176,7 @@ for (const [dateET, timeET, home, away, venueId] of SCHEDULE) {
   if (!h) throw new Error(`Unknown home team: ${home}`);
   if (!a) throw new Error(`Unknown away team: ${away}`);
   if (h.groupId !== a.groupId) throw new Error(`Cross-group match: ${home} vs ${away}`);
+  const result = RESULTS[`${home}|${away}`] ?? null;
   matches.push({
     id: `M${String(n).padStart(2, "0")}`,
     matchNumber: n,
@@ -177,9 +188,9 @@ for (const [dateET, timeET, home, away, venueId] of SCHEDULE) {
     awayTeamId: a.id,
     homeLabel: null,
     awayLabel: null,
-    status: "scheduled",
-    homeScore: null,
-    awayScore: null,
+    status: result ? "finished" : "scheduled",
+    homeScore: result ? result[0] : null,
+    awayScore: result ? result[1] : null,
   });
   n++;
 }

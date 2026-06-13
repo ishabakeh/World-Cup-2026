@@ -36,7 +36,12 @@ export function validateData(raw: unknown): asserts raw is TournamentData {
 }
 
 async function fetchJson(url: string): Promise<unknown> {
-  const res = await fetch(url, { cache: "no-store" });
+  // Append a cache-buster so a freshly deployed file isn't masked by the
+  // GitHub Pages CDN edge cache (which can serve a stale copy for a few minutes
+  // after a push). Combined with no-store, this guarantees we read the latest.
+  const bust = `_=${Date.now()}`;
+  const url2 = url.includes("?") ? `${url}&${bust}` : `${url}?${bust}`;
+  const res = await fetch(url2, { cache: "no-store" });
   if (!res.ok) throw new Error(`HTTP ${res.status} fetching data source`);
   return res.json();
 }

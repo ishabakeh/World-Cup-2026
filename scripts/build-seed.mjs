@@ -166,6 +166,8 @@ function etToUtcIso(dateET, timeET) {
 const RESULTS = {
   "Mexico|South Africa": [2, 0],
   "South Korea|Czechia": [2, 1],
+  "Canada|Bosnia and Herzegovina": [1, 1],
+  "United States|Paraguay": [4, 1],
 };
 
 const matches = [];

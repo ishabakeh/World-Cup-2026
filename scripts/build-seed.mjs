@@ -168,6 +168,10 @@ const RESULTS = {
   "South Korea|Czechia": [2, 1],
   "Canada|Bosnia and Herzegovina": [1, 1],
   "United States|Paraguay": [4, 1],
+  "Qatar|Switzerland": [1, 1],
+  "Brazil|Morocco": [1, 1],
+  "Haiti|Scotland": [0, 1],
+  "Australia|Turkiye": [2, 0],
 };
 
 const matches = [];

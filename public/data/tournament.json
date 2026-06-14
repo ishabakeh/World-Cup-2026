@@ -772,9 +772,9 @@
       "awayTeamId": "sui",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1
     },
     {
       "id": "M06",
@@ -787,9 +787,9 @@
       "awayTeamId": "mar",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1
     },
     {
       "id": "M07",
@@ -802,9 +802,9 @@
       "awayTeamId": "sco",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 1
     },
     {
       "id": "M08",
@@ -817,9 +817,9 @@
       "awayTeamId": "tur",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 0
     },
     {
       "id": "M09",
@@ -2413,8 +2413,8 @@
       "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_draw",
       "https://www.nbcsports.com/soccer/news/2026-world-cup-schedule-confirmed-dates-times-stadiums-full-details"
     ],
-    "crawledAt": "2026-06-13T19:56:11.000Z",
-    "version": "073911f43267",
+    "crawledAt": "2026-06-14T17:45:46.000Z",
+    "version": "84868456669a",
     "schemaVersion": 1,
     "notes": "Group stage is final (dates, kickoff times in venue-local via UTC, venues). Knockout matchups are structural placeholders until results are known."
   }

@@ -832,9 +832,9 @@
       "awayTeamId": "cuw",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 7,
+      "awayScore": 1
     },
     {
       "id": "M10",
@@ -847,9 +847,9 @@
       "awayTeamId": "ecu",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 0
     },
     {
       "id": "M11",
@@ -862,9 +862,9 @@
       "awayTeamId": "jpn",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 2
     },
     {
       "id": "M12",
@@ -877,9 +877,9 @@
       "awayTeamId": "tun",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 5,
+      "awayScore": 1
     },
     {
       "id": "M13",
@@ -907,9 +907,9 @@
       "awayTeamId": "egy",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 1
     },
     {
       "id": "M15",
@@ -922,9 +922,9 @@
       "awayTeamId": "cpv",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 0
     },
     {
       "id": "M16",
@@ -2413,8 +2413,8 @@
       "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_draw",
       "https://www.nbcsports.com/soccer/news/2026-world-cup-schedule-confirmed-dates-times-stadiums-full-details"
     ],
-    "crawledAt": "2026-06-14T17:45:46.000Z",
-    "version": "84868456669a",
+    "crawledAt": "2026-06-15T19:50:24.000Z",
+    "version": "5eda3a06342a",
     "schemaVersion": 1,
     "notes": "Group stage is final (dates, kickoff times in venue-local via UTC, venues). Knockout matchups are structural placeholders until results are known."
   }

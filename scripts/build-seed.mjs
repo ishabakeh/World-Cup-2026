@@ -172,6 +172,12 @@ const RESULTS = {
   "Brazil|Morocco": [1, 1],
   "Haiti|Scotland": [0, 1],
   "Australia|Turkiye": [2, 0],
+  "Germany|Curacao": [7, 1],
+  "Ivory Coast|Ecuador": [1, 0],
+  "Sweden|Tunisia": [5, 1],
+  "Netherlands|Japan": [2, 2],
+  "Belgium|Egypt": [0, 1],
+  "Spain|Cape Verde": [0, 0],
 };
 
 const matches = [];

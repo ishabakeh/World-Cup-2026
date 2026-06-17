@@ -178,6 +178,10 @@ const RESULTS = {
   "Netherlands|Japan": [2, 2],
   "Belgium|Egypt": [0, 1],
   "Spain|Cape Verde": [0, 0],
+  "France|Senegal": [3, 1],
+  "Norway|Iraq": [4, 1],
+  "Argentina|Algeria": [3, 0],
+  "Austria|Jordan": [3, 1],
 };
 
 const matches = [];

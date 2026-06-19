@@ -1012,9 +1012,9 @@
       "awayTeamId": "cod",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1
     },
     {
       "id": "M22",
@@ -1027,9 +1027,9 @@
       "awayTeamId": "col",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 3
     },
     {
       "id": "M23",
@@ -1042,9 +1042,9 @@
       "awayTeamId": "cro",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 4,
+      "awayScore": 2
     },
     {
       "id": "M24",
@@ -1057,9 +1057,9 @@
       "awayTeamId": "pan",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 0
     },
     {
       "id": "M25",
@@ -1072,9 +1072,9 @@
       "awayTeamId": "rsa",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1
     },
     {
       "id": "M26",
@@ -1087,9 +1087,9 @@
       "awayTeamId": "kor",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 0
     },
     {
       "id": "M27",
@@ -1102,9 +1102,9 @@
       "awayTeamId": "bih",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 4,
+      "awayScore": 1
     },
     {
       "id": "M28",
@@ -1117,9 +1117,9 @@
       "awayTeamId": "qat",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 6,
+      "awayScore": 0
     },
     {
       "id": "M29",
@@ -2413,8 +2413,8 @@
       "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_draw",
       "https://www.nbcsports.com/soccer/news/2026-world-cup-schedule-confirmed-dates-times-stadiums-full-details"
     ],
-    "crawledAt": "2026-06-17T14:17:13.000Z",
-    "version": "d2e1dcbfa914",
+    "crawledAt": "2026-06-19T13:11:42.000Z",
+    "version": "14a761e45cff",
     "schemaVersion": 1,
     "notes": "Group stage is final (dates, kickoff times in venue-local via UTC, venues). Knockout matchups are structural placeholders until results are known."
   }

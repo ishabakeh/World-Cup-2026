@@ -182,6 +182,14 @@ const RESULTS = {
   "Norway|Iraq": [4, 1],
   "Argentina|Algeria": [3, 0],
   "Austria|Jordan": [3, 1],
+  "Portugal|DR Congo": [1, 1],
+  "Uzbekistan|Colombia": [1, 3],
+  "England|Croatia": [4, 2],
+  "Ghana|Panama": [1, 0],
+  "Czechia|South Africa": [1, 1],
+  "Switzerland|Bosnia and Herzegovina": [4, 1],
+  "Canada|Qatar": [6, 0],
+  "Mexico|South Korea": [1, 0],
 };
 
 const matches = [];

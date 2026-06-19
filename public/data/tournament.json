@@ -892,9 +892,9 @@
       "awayTeamId": "nzl",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 2
     },
     {
       "id": "M14",
@@ -908,7 +908,7 @@
       "homeLabel": null,
       "awayLabel": null,
       "status": "finished",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 1
     },
     {
@@ -937,9 +937,9 @@
       "awayTeamId": "uru",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1
     },
     {
       "id": "M17",
@@ -967,9 +967,9 @@
       "awayTeamId": "nor",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 4
     },
     {
       "id": "M19",
@@ -1162,9 +1162,9 @@
       "awayTeamId": "aus",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 0
     },
     {
       "id": "M32",
@@ -2413,8 +2413,8 @@
       "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_draw",
       "https://www.nbcsports.com/soccer/news/2026-world-cup-schedule-confirmed-dates-times-stadiums-full-details"
     ],
-    "crawledAt": "2026-06-19T13:11:42.000Z",
-    "version": "14a761e45cff",
+    "crawledAt": "2026-06-19T21:39:42.000Z",
+    "version": "a254cd20cb82",
     "schemaVersion": 1,
     "notes": "Group stage is final (dates, kickoff times in venue-local via UTC, venues). Knockout matchups are structural placeholders until results are known."
   }

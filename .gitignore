@@ -149,3 +149,4 @@ vite.config.ts.timestamp-*
 # Local AI assistant config & notes (not part of the project)
 .claude/
 CLAUDE.md
+AGENTS.md

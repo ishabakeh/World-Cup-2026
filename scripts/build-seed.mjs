@@ -176,10 +176,12 @@ const RESULTS = {
   "Ivory Coast|Ecuador": [1, 0],
   "Sweden|Tunisia": [5, 1],
   "Netherlands|Japan": [2, 2],
-  "Belgium|Egypt": [0, 1],
+  "Iran|New Zealand": [2, 2],
+  "Belgium|Egypt": [1, 1],
   "Spain|Cape Verde": [0, 0],
+  "Saudi Arabia|Uruguay": [1, 1],
   "France|Senegal": [3, 1],
-  "Norway|Iraq": [4, 1],
+  "Iraq|Norway": [1, 4],
   "Argentina|Algeria": [3, 0],
   "Austria|Jordan": [3, 1],
   "Portugal|DR Congo": [1, 1],
@@ -190,7 +192,16 @@ const RESULTS = {
   "Switzerland|Bosnia and Herzegovina": [4, 1],
   "Canada|Qatar": [6, 0],
   "Mexico|South Korea": [1, 0],
+  "United States|Australia": [2, 0],
 };
+
+const scheduleResultKeys = new Set(SCHEDULE.map(([, , home, away]) => `${home}|${away}`));
+for (const [key, score] of Object.entries(RESULTS)) {
+  if (!scheduleResultKeys.has(key)) throw new Error(`Result does not match a scheduled fixture: ${key}`);
+  if (!Array.isArray(score) || score.length !== 2 || score.some((value) => !Number.isInteger(value) || value < 0)) {
+    throw new Error(`Invalid result for ${key}: ${JSON.stringify(score)}`);
+  }
+}
 
 const matches = [];
 let n = 1;

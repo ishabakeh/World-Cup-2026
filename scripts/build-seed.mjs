@@ -193,6 +193,9 @@ const RESULTS = {
   "Canada|Qatar": [6, 0],
   "Mexico|South Korea": [1, 0],
   "United States|Australia": [2, 0],
+  "Scotland|Morocco": [0, 1],
+  "Brazil|Haiti": [3, 0],
+  "Turkiye|Paraguay": [0, 1],
 };
 
 const scheduleResultKeys = new Set(SCHEDULE.map(([, , home, away]) => `${home}|${away}`));

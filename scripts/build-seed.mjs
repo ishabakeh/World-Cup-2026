@@ -196,6 +196,10 @@ const RESULTS = {
   "Scotland|Morocco": [0, 1],
   "Brazil|Haiti": [3, 0],
   "Turkiye|Paraguay": [0, 1],
+  "Germany|Ivory Coast": [2, 1],
+  "Ecuador|Curacao": [0, 0],
+  "Netherlands|Sweden": [5, 1],
+  "Tunisia|Japan": [0, 4],
 };
 
 const scheduleResultKeys = new Set(SCHEDULE.map(([, , home, away]) => `${home}|${away}`));

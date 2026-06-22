@@ -200,6 +200,10 @@ const RESULTS = {
   "Ecuador|Curacao": [0, 0],
   "Netherlands|Sweden": [5, 1],
   "Tunisia|Japan": [0, 4],
+  "Belgium|Iran": [0, 0],
+  "New Zealand|Egypt": [1, 3],
+  "Spain|Saudi Arabia": [4, 0],
+  "Uruguay|Cape Verde": [2, 2],
 };
 
 const scheduleResultKeys = new Set(SCHEDULE.map(([, , home, away]) => `${home}|${away}`));

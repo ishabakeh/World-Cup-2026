@@ -1788,10 +1788,10 @@
       "groupId": null,
       "venueId": null,
       "kickoff": "2026-06-28T20:00:00.000Z",
-      "homeTeamId": "mex",
-      "awayTeamId": null,
+      "homeTeamId": "rsa",
+      "awayTeamId": "can",
       "homeLabel": null,
-      "awayLabel": "3rd (C/E/F/H)",
+      "awayLabel": null,
       "status": "scheduled",
       "homeScore": null,
       "awayScore": null,
@@ -1804,10 +1804,10 @@
       "groupId": null,
       "venueId": null,
       "kickoff": "2026-06-29T20:00:00.000Z",
-      "homeTeamId": "bra",
+      "homeTeamId": "ger",
       "awayTeamId": null,
       "homeLabel": null,
-      "awayLabel": "3rd (D/E/I/J/L)",
+      "awayLabel": "3rd (A/B/C/D/F)",
       "status": "scheduled",
       "homeScore": null,
       "awayScore": null,
@@ -1820,10 +1820,10 @@
       "groupId": null,
       "venueId": null,
       "kickoff": "2026-06-29T20:00:00.000Z",
-      "homeTeamId": "ger",
-      "awayTeamId": null,
+      "homeTeamId": "ned",
+      "awayTeamId": "mar",
       "homeLabel": null,
-      "awayLabel": "3rd (A/B/F/I)",
+      "awayLabel": null,
       "status": "scheduled",
       "homeScore": null,
       "awayScore": null,
@@ -1836,8 +1836,8 @@
       "groupId": null,
       "venueId": null,
       "kickoff": "2026-06-30T20:00:00.000Z",
-      "homeTeamId": "rsa",
-      "awayTeamId": "can",
+      "homeTeamId": "bra",
+      "awayTeamId": "jpn",
       "homeLabel": null,
       "awayLabel": null,
       "status": "scheduled",
@@ -1852,10 +1852,10 @@
       "groupId": null,
       "venueId": null,
       "kickoff": "2026-06-30T20:00:00.000Z",
-      "homeTeamId": "ned",
-      "awayTeamId": "mar",
+      "homeTeamId": "fra",
+      "awayTeamId": null,
       "homeLabel": null,
-      "awayLabel": null,
+      "awayLabel": "3rd (C/D/F/G/H)",
       "status": "scheduled",
       "homeScore": null,
       "awayScore": null,
@@ -1868,8 +1868,8 @@
       "groupId": null,
       "venueId": null,
       "kickoff": "2026-07-01T20:00:00.000Z",
-      "homeTeamId": "fra",
-      "awayTeamId": "aus",
+      "homeTeamId": "civ",
+      "awayTeamId": "nor",
       "homeLabel": null,
       "awayLabel": null,
       "status": "scheduled",
@@ -1884,10 +1884,10 @@
       "groupId": null,
       "venueId": null,
       "kickoff": "2026-07-01T20:00:00.000Z",
-      "homeTeamId": "sui",
+      "homeTeamId": "mex",
       "awayTeamId": null,
       "homeLabel": null,
-      "awayLabel": "3rd (E/H/I/J/K)",
+      "awayLabel": "3rd (C/E/F/H/I)",
       "status": "scheduled",
       "homeScore": null,
       "awayScore": null,
@@ -1900,10 +1900,10 @@
       "groupId": null,
       "venueId": null,
       "kickoff": "2026-07-02T20:00:00.000Z",
-      "homeTeamId": "usa",
+      "homeTeamId": null,
       "awayTeamId": null,
-      "homeLabel": null,
-      "awayLabel": "3rd (B/E/F/I/J)",
+      "homeLabel": "1L",
+      "awayLabel": "3rd (E/H/I/J/K)",
       "status": "scheduled",
       "homeScore": null,
       "awayScore": null,
@@ -1916,10 +1916,10 @@
       "groupId": null,
       "venueId": null,
       "kickoff": "2026-06-28T20:00:00.000Z",
-      "homeTeamId": "bel",
+      "homeTeamId": "usa",
       "awayTeamId": null,
       "homeLabel": null,
-      "awayLabel": "3rd (A/E/H/I/J)",
+      "awayLabel": "3rd (B/E/F/I/J)",
       "status": "scheduled",
       "homeScore": null,
       "awayScore": null,
@@ -1932,10 +1932,10 @@
       "groupId": null,
       "venueId": null,
       "kickoff": "2026-06-29T20:00:00.000Z",
-      "homeTeamId": "civ",
-      "awayTeamId": "jpn",
+      "homeTeamId": "bel",
+      "awayTeamId": null,
       "homeLabel": null,
-      "awayLabel": null,
+      "awayLabel": "3rd (A/E/H/I/J)",
       "status": "scheduled",
       "homeScore": null,
       "awayScore": null,
@@ -1948,10 +1948,10 @@
       "groupId": null,
       "venueId": null,
       "kickoff": "2026-06-30T20:00:00.000Z",
-      "homeTeamId": "esp",
+      "homeTeamId": null,
       "awayTeamId": null,
-      "homeLabel": null,
-      "awayLabel": "2J",
+      "homeLabel": "2K",
+      "awayLabel": "2L",
       "status": "scheduled",
       "homeScore": null,
       "awayScore": null,
@@ -1964,10 +1964,10 @@
       "groupId": null,
       "venueId": null,
       "kickoff": "2026-07-01T20:00:00.000Z",
-      "homeTeamId": null,
+      "homeTeamId": "esp",
       "awayTeamId": null,
-      "homeLabel": "1K",
-      "awayLabel": "2L",
+      "homeLabel": null,
+      "awayLabel": "2J",
       "status": "scheduled",
       "homeScore": null,
       "awayScore": null,
@@ -1980,10 +1980,10 @@
       "groupId": null,
       "venueId": null,
       "kickoff": "2026-07-02T20:00:00.000Z",
-      "homeTeamId": null,
+      "homeTeamId": "sui",
       "awayTeamId": null,
-      "homeLabel": "1J",
-      "awayLabel": "3rd (C/D/F/G/H)",
+      "homeLabel": null,
+      "awayLabel": "3rd (E/F/G/I/J)",
       "status": "scheduled",
       "homeScore": null,
       "awayScore": null,
@@ -1997,9 +1997,9 @@
       "venueId": null,
       "kickoff": "2026-07-02T20:00:00.000Z",
       "homeTeamId": null,
-      "awayTeamId": null,
-      "homeLabel": "1L",
-      "awayLabel": "3rd (A/B/C/D/G)",
+      "awayTeamId": "cpv",
+      "homeLabel": "1J",
+      "awayLabel": null,
       "status": "scheduled",
       "homeScore": null,
       "awayScore": null,
@@ -2012,10 +2012,10 @@
       "groupId": null,
       "venueId": null,
       "kickoff": "2026-07-03T20:00:00.000Z",
-      "homeTeamId": "egy",
-      "awayTeamId": "cpv",
-      "homeLabel": null,
-      "awayLabel": null,
+      "homeTeamId": null,
+      "awayTeamId": null,
+      "homeLabel": "1K",
+      "awayLabel": "3rd (D/E/I/J/L)",
       "status": "scheduled",
       "homeScore": null,
       "awayScore": null,
@@ -2028,10 +2028,10 @@
       "groupId": null,
       "venueId": null,
       "kickoff": "2026-07-03T20:00:00.000Z",
-      "homeTeamId": "nor",
-      "awayTeamId": null,
+      "homeTeamId": "aus",
+      "awayTeamId": "egy",
       "homeLabel": null,
-      "awayLabel": "2K",
+      "awayLabel": null,
       "status": "scheduled",
       "homeScore": null,
       "awayScore": null,
@@ -2056,7 +2056,7 @@
           "winnerOf": "R32-1"
         },
         "away": {
-          "winnerOf": "R32-2"
+          "winnerOf": "R32-3"
         }
       }
     },
@@ -2076,10 +2076,10 @@
       "awayScore": null,
       "feeders": {
         "home": {
-          "winnerOf": "R32-3"
+          "winnerOf": "R32-2"
         },
         "away": {
-          "winnerOf": "R32-4"
+          "winnerOf": "R32-5"
         }
       }
     },
@@ -2099,7 +2099,7 @@
       "awayScore": null,
       "feeders": {
         "home": {
-          "winnerOf": "R32-5"
+          "winnerOf": "R32-4"
         },
         "away": {
           "winnerOf": "R32-6"
@@ -2145,10 +2145,10 @@
       "awayScore": null,
       "feeders": {
         "home": {
-          "winnerOf": "R32-9"
+          "winnerOf": "R32-11"
         },
         "away": {
-          "winnerOf": "R32-10"
+          "winnerOf": "R32-12"
         }
       }
     },
@@ -2168,10 +2168,10 @@
       "awayScore": null,
       "feeders": {
         "home": {
-          "winnerOf": "R32-11"
+          "winnerOf": "R32-9"
         },
         "away": {
-          "winnerOf": "R32-12"
+          "winnerOf": "R32-10"
         }
       }
     },
@@ -2191,10 +2191,10 @@
       "awayScore": null,
       "feeders": {
         "home": {
-          "winnerOf": "R32-13"
+          "winnerOf": "R32-14"
         },
         "away": {
-          "winnerOf": "R32-14"
+          "winnerOf": "R32-16"
         }
       }
     },
@@ -2214,10 +2214,10 @@
       "awayScore": null,
       "feeders": {
         "home": {
-          "winnerOf": "R32-15"
+          "winnerOf": "R32-13"
         },
         "away": {
-          "winnerOf": "R32-16"
+          "winnerOf": "R32-15"
         }
       }
     },
@@ -2260,10 +2260,10 @@
       "awayScore": null,
       "feeders": {
         "home": {
-          "winnerOf": "R16-3"
+          "winnerOf": "R16-5"
         },
         "away": {
-          "winnerOf": "R16-4"
+          "winnerOf": "R16-6"
         }
       }
     },
@@ -2283,10 +2283,10 @@
       "awayScore": null,
       "feeders": {
         "home": {
-          "winnerOf": "R16-5"
+          "winnerOf": "R16-3"
         },
         "away": {
-          "winnerOf": "R16-6"
+          "winnerOf": "R16-4"
         }
       }
     },
@@ -2413,8 +2413,8 @@
       "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_draw",
       "https://www.nbcsports.com/soccer/news/2026-world-cup-schedule-confirmed-dates-times-stadiums-full-details"
     ],
-    "crawledAt": "2026-06-27T12:14:09.000Z",
-    "version": "e159e9b468a6",
+    "crawledAt": "2026-06-27T14:22:44.000Z",
+    "version": "a6ce00479b20",
     "schemaVersion": 1,
     "notes": "Group stage is final (dates, kickoff times in venue-local via UTC, venues). Knockout matchups are structural placeholders until results are known."
   }

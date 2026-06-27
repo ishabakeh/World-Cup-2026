@@ -341,14 +341,22 @@ function feeders(match, home, away) {
 const knockout = [];
 // Round of 32 — 16 matches, June 28 – July 3. Venues TBD until update.
 const r32Labels = [
-  ["1A", "3rd (C/E/F/H)"], ["1C", "3rd (D/E/I/J/L)"],
-  ["1E", "3rd (A/B/F/I)"], ["2A", "2B"],
-  ["1F", "2C"], ["1I", "2D"],
-  ["1B", "3rd (E/H/I/J/K)"], ["1D", "3rd (B/E/F/I/J)"],
-  ["1G", "3rd (A/E/H/I/J)"], ["2E", "2F"],
-  ["1H", "2J"], ["1K", "2L"],
-  ["1J", "3rd (C/D/F/G/H)"], ["1L", "3rd (A/B/C/D/G)"],
-  ["2G", "2H"], ["2I", "2K"],
+  ["2A", "2B"],
+  ["1E", "3rd (A/B/C/D/F)"],
+  ["1F", "2C"],
+  ["1C", "2F"],
+  ["1I", "3rd (C/D/F/G/H)"],
+  ["2E", "2I"],
+  ["1A", "3rd (C/E/F/H/I)"],
+  ["1L", "3rd (E/H/I/J/K)"],
+  ["1D", "3rd (B/E/F/I/J)"],
+  ["1G", "3rd (A/E/H/I/J)"],
+  ["2K", "2L"],
+  ["1H", "2J"],
+  ["1B", "3rd (E/F/G/I/J)"],
+  ["1J", "2H"],
+  ["1K", "3rd (D/E/I/J/L)"],
+  ["2D", "2G"],
 ];
 const r32Dates = ["2026-06-28","2026-06-29","2026-06-29","2026-06-30","2026-06-30","2026-07-01","2026-07-01","2026-07-02","2026-06-28","2026-06-29","2026-06-30","2026-07-01","2026-07-02","2026-07-02","2026-07-03","2026-07-03"];
 for (let i = 0; i < 16; i++) {
@@ -360,18 +368,34 @@ for (let i = 0; i < 16; i++) {
   match.awayLabel = match.awayTeamId ? null : awayLabel;
   knockout.push(match);
 }
-// Round of 16 — 8 matches, July 4–7. Feeders: winners of consecutive R32 pairs.
+// Round of 16 — 8 matches, July 4–7. Feeders follow official Match 89–96 order.
 const r16Dates = ["2026-07-04","2026-07-04","2026-07-05","2026-07-05","2026-07-06","2026-07-06","2026-07-07","2026-07-07"];
+const r16Feeders = [
+  ["R32-1", "R32-3"],
+  ["R32-2", "R32-5"],
+  ["R32-4", "R32-6"],
+  ["R32-7", "R32-8"],
+  ["R32-11", "R32-12"],
+  ["R32-9", "R32-10"],
+  ["R32-14", "R32-16"],
+  ["R32-13", "R32-15"],
+];
 for (let i = 0; i < 8; i++) {
   const m = ko(`R16-${i + 1}`, "r16", etToUtcIso(r16Dates[i], "16:00"), null, null, null);
-  feeders(m, { winnerOf: `R32-${2 * i + 1}` }, { winnerOf: `R32-${2 * i + 2}` });
+  feeders(m, { winnerOf: r16Feeders[i][0] }, { winnerOf: r16Feeders[i][1] });
   knockout.push(m);
 }
 // Quarter-finals — 4 matches, July 9–11.
 const qfDates = ["2026-07-09","2026-07-10","2026-07-11","2026-07-11"];
+const qfFeeders = [
+  ["R16-1", "R16-2"],
+  ["R16-5", "R16-6"],
+  ["R16-3", "R16-4"],
+  ["R16-7", "R16-8"],
+];
 for (let i = 0; i < 4; i++) {
   const m = ko(`QF-${i + 1}`, "qf", etToUtcIso(qfDates[i], "16:00"), null, null, null);
-  feeders(m, { winnerOf: `R16-${2 * i + 1}` }, { winnerOf: `R16-${2 * i + 2}` });
+  feeders(m, { winnerOf: qfFeeders[i][0] }, { winnerOf: qfFeeders[i][1] });
   knockout.push(m);
 }
 // Semi-finals — 2 matches, July 14–15.

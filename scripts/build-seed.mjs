@@ -267,6 +267,61 @@ for (const [dateET, timeET, home, away, venueId] of SCHEDULE) {
   n++;
 }
 
+function standingsForGroup(groupId) {
+  const groupTeamIds = teams.filter((team) => team.groupId === groupId).map((team) => team.id);
+  const seedOrder = new Map(groupTeamIds.map((id, index) => [id, index]));
+  const rows = new Map(groupTeamIds.map((id) => [id, {
+    teamId: id,
+    played: 0,
+    points: 0,
+    goalsFor: 0,
+    goalsAgainst: 0,
+  }]));
+
+  for (const match of matches.filter((m) => m.stage === "group" && m.groupId === groupId && m.status === "finished")) {
+    const home = rows.get(match.homeTeamId);
+    const away = rows.get(match.awayTeamId);
+    if (!home || !away) continue;
+
+    home.played += 1;
+    away.played += 1;
+    home.goalsFor += match.homeScore;
+    home.goalsAgainst += match.awayScore;
+    away.goalsFor += match.awayScore;
+    away.goalsAgainst += match.homeScore;
+
+    if (match.homeScore > match.awayScore) {
+      home.points += 3;
+    } else if (match.homeScore < match.awayScore) {
+      away.points += 3;
+    } else {
+      home.points += 1;
+      away.points += 1;
+    }
+  }
+
+  return [...rows.values()].sort((a, b) => (
+    b.points - a.points ||
+    (b.goalsFor - b.goalsAgainst) - (a.goalsFor - a.goalsAgainst) ||
+    b.goalsFor - a.goalsFor ||
+    seedOrder.get(a.teamId) - seedOrder.get(b.teamId)
+  ));
+}
+
+const completedGroupSlots = new Map();
+for (const groupId of Object.keys(GROUPS)) {
+  const groupMatches = matches.filter((match) => match.stage === "group" && match.groupId === groupId);
+  if (groupMatches.length === 6 && groupMatches.every((match) => match.status === "finished")) {
+    standingsForGroup(groupId).forEach((row, index) => {
+      completedGroupSlots.set(`${index + 1}${groupId}`, row.teamId);
+    });
+  }
+}
+
+function resolveCompletedGroupSlot(label) {
+  return completedGroupSlots.get(label) ?? null;
+}
+
 // ---------------------------------------------------------------------------
 // KNOCKOUT BRACKET  (structural placeholders; exact pairings/venues per update.md)
 // ---------------------------------------------------------------------------
@@ -297,7 +352,13 @@ const r32Labels = [
 ];
 const r32Dates = ["2026-06-28","2026-06-29","2026-06-29","2026-06-30","2026-06-30","2026-07-01","2026-07-01","2026-07-02","2026-06-28","2026-06-29","2026-06-30","2026-07-01","2026-07-02","2026-07-02","2026-07-03","2026-07-03"];
 for (let i = 0; i < 16; i++) {
-  knockout.push(ko(`R32-${i + 1}`, "r32", etToUtcIso(r32Dates[i], "16:00"), null, r32Labels[i][0], r32Labels[i][1]));
+  const [homeLabel, awayLabel] = r32Labels[i];
+  const match = ko(`R32-${i + 1}`, "r32", etToUtcIso(r32Dates[i], "16:00"), null, homeLabel, awayLabel);
+  match.homeTeamId = resolveCompletedGroupSlot(homeLabel);
+  match.awayTeamId = resolveCompletedGroupSlot(awayLabel);
+  match.homeLabel = match.homeTeamId ? null : homeLabel;
+  match.awayLabel = match.awayTeamId ? null : awayLabel;
+  knockout.push(match);
 }
 // Round of 16 — 8 matches, July 4–7. Feeders: winners of consecutive R32 pairs.
 const r16Dates = ["2026-07-04","2026-07-04","2026-07-05","2026-07-05","2026-07-06","2026-07-06","2026-07-07","2026-07-07"];

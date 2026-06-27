@@ -1312,9 +1312,9 @@
       "awayTeamId": "irq",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 0
     },
     {
       "id": "M42",
@@ -1327,9 +1327,9 @@
       "awayTeamId": "sen",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 2
     },
     {
       "id": "M43",
@@ -1342,9 +1342,9 @@
       "awayTeamId": "aut",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 0
     },
     {
       "id": "M44",
@@ -1357,9 +1357,9 @@
       "awayTeamId": "alg",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 2
     },
     {
       "id": "M45",
@@ -1372,9 +1372,9 @@
       "awayTeamId": "uzb",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 5,
+      "awayScore": 0
     },
     {
       "id": "M46",
@@ -1387,9 +1387,9 @@
       "awayTeamId": "cod",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 0
     },
     {
       "id": "M47",
@@ -1402,9 +1402,9 @@
       "awayTeamId": "gha",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 0
     },
     {
       "id": "M48",
@@ -1417,9 +1417,9 @@
       "awayTeamId": "cro",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 1
     },
     {
       "id": "M49",
@@ -1432,9 +1432,9 @@
       "awayTeamId": "mex",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 3
     },
     {
       "id": "M50",
@@ -1447,9 +1447,9 @@
       "awayTeamId": "kor",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 0
     },
     {
       "id": "M51",
@@ -1462,9 +1462,9 @@
       "awayTeamId": "can",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 1
     },
     {
       "id": "M52",
@@ -1477,9 +1477,9 @@
       "awayTeamId": "qat",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 1
     },
     {
       "id": "M53",
@@ -1492,9 +1492,9 @@
       "awayTeamId": "bra",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 3
     },
     {
       "id": "M54",
@@ -1507,9 +1507,9 @@
       "awayTeamId": "hai",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 4,
+      "awayScore": 2
     },
     {
       "id": "M55",
@@ -1522,9 +1522,9 @@
       "awayTeamId": "ger",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 1
     },
     {
       "id": "M56",
@@ -1537,9 +1537,9 @@
       "awayTeamId": "civ",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 2
     },
     {
       "id": "M57",
@@ -1552,9 +1552,9 @@
       "awayTeamId": "usa",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 2
     },
     {
       "id": "M58",
@@ -1567,9 +1567,9 @@
       "awayTeamId": "aus",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 0
     },
     {
       "id": "M59",
@@ -1582,9 +1582,9 @@
       "awayTeamId": "swe",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1
     },
     {
       "id": "M60",
@@ -1597,9 +1597,9 @@
       "awayTeamId": "ned",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 3
     },
     {
       "id": "M61",
@@ -1612,9 +1612,9 @@
       "awayTeamId": "irn",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1
     },
     {
       "id": "M62",
@@ -1627,9 +1627,9 @@
       "awayTeamId": "bel",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 5
     },
     {
       "id": "M63",
@@ -1642,9 +1642,9 @@
       "awayTeamId": "ksa",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 0
     },
     {
       "id": "M64",
@@ -1657,9 +1657,9 @@
       "awayTeamId": "esp",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 1
     },
     {
       "id": "M65",
@@ -1672,9 +1672,9 @@
       "awayTeamId": "fra",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 4
     },
     {
       "id": "M66",
@@ -1687,9 +1687,9 @@
       "awayTeamId": "irq",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "homeScore": 5,
+      "awayScore": 0
     },
     {
       "id": "M67",
@@ -2413,8 +2413,8 @@
       "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_draw",
       "https://www.nbcsports.com/soccer/news/2026-world-cup-schedule-confirmed-dates-times-stadiums-full-details"
     ],
-    "crawledAt": "2026-06-22T09:18:47.000Z",
-    "version": "1ad2b1aff7ae",
+    "crawledAt": "2026-06-27T11:08:47.000Z",
+    "version": "e0d474865f42",
     "schemaVersion": 1,
     "notes": "Group stage is final (dates, kickoff times in venue-local via UTC, venues). Knockout matchups are structural placeholders until results are known."
   }

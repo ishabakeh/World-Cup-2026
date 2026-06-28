@@ -10,14 +10,14 @@ export function Bracket() {
     <div className="space-y-6">
       <SectionTitle
         title="Knockout bracket"
-        subtitle="Round of 32 → Final. Slots fill in as groups conclude — tap any match for details."
+        subtitle="The Final sits at the centre — the two halves of the draw close in from each side. Tap any match for details."
       />
       <div className="glass p-4 sm:p-6">
         <BracketView matches={knockout} />
       </div>
       <p className="text-xs text-ink-faint">
-        Scroll horizontally to follow the road to the final. Knockout matchups currently show seeding placeholders
-        (e.g. “Winner R32 1”); they resolve to real teams once results are recorded.
+        Each match sits halfway between the two it feeds from. Slots show seeding placeholders (e.g. “Winner R32 1”)
+        until results are recorded, then resolve to real teams.
       </p>
     </div>
   );

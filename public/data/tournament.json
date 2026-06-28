@@ -1786,7 +1786,7 @@
       "matchNumber": 73,
       "stage": "r32",
       "groupId": null,
-      "venueId": null,
+      "venueId": "sofi",
       "kickoff": "2026-06-28T20:00:00.000Z",
       "homeTeamId": "rsa",
       "awayTeamId": "can",
@@ -1802,7 +1802,7 @@
       "matchNumber": 74,
       "stage": "r32",
       "groupId": null,
-      "venueId": null,
+      "venueId": "gillette",
       "kickoff": "2026-06-29T20:00:00.000Z",
       "homeTeamId": "ger",
       "awayTeamId": "par",
@@ -1818,7 +1818,7 @@
       "matchNumber": 75,
       "stage": "r32",
       "groupId": null,
-      "venueId": null,
+      "venueId": "bbva",
       "kickoff": "2026-06-29T20:00:00.000Z",
       "homeTeamId": "ned",
       "awayTeamId": "mar",
@@ -1834,8 +1834,8 @@
       "matchNumber": 76,
       "stage": "r32",
       "groupId": null,
-      "venueId": null,
-      "kickoff": "2026-06-30T20:00:00.000Z",
+      "venueId": "nrg",
+      "kickoff": "2026-06-29T20:00:00.000Z",
       "homeTeamId": "bra",
       "awayTeamId": "jpn",
       "homeLabel": null,
@@ -1850,7 +1850,7 @@
       "matchNumber": 77,
       "stage": "r32",
       "groupId": null,
-      "venueId": null,
+      "venueId": "metlife",
       "kickoff": "2026-06-30T20:00:00.000Z",
       "homeTeamId": "fra",
       "awayTeamId": "swe",
@@ -1866,8 +1866,8 @@
       "matchNumber": 78,
       "stage": "r32",
       "groupId": null,
-      "venueId": null,
-      "kickoff": "2026-07-01T20:00:00.000Z",
+      "venueId": "att",
+      "kickoff": "2026-06-30T20:00:00.000Z",
       "homeTeamId": "civ",
       "awayTeamId": "nor",
       "homeLabel": null,
@@ -1882,8 +1882,8 @@
       "matchNumber": 79,
       "stage": "r32",
       "groupId": null,
-      "venueId": null,
-      "kickoff": "2026-07-01T20:00:00.000Z",
+      "venueId": "azteca",
+      "kickoff": "2026-06-30T20:00:00.000Z",
       "homeTeamId": "mex",
       "awayTeamId": "ecu",
       "homeLabel": null,
@@ -1898,8 +1898,8 @@
       "matchNumber": 80,
       "stage": "r32",
       "groupId": null,
-      "venueId": null,
-      "kickoff": "2026-07-02T20:00:00.000Z",
+      "venueId": "mercedes",
+      "kickoff": "2026-07-01T20:00:00.000Z",
       "homeTeamId": "eng",
       "awayTeamId": "cod",
       "homeLabel": null,
@@ -1914,8 +1914,8 @@
       "matchNumber": 81,
       "stage": "r32",
       "groupId": null,
-      "venueId": null,
-      "kickoff": "2026-06-28T20:00:00.000Z",
+      "venueId": "levis",
+      "kickoff": "2026-07-01T20:00:00.000Z",
       "homeTeamId": "usa",
       "awayTeamId": "bih",
       "homeLabel": null,
@@ -1930,8 +1930,8 @@
       "matchNumber": 82,
       "stage": "r32",
       "groupId": null,
-      "venueId": null,
-      "kickoff": "2026-06-29T20:00:00.000Z",
+      "venueId": "lumen",
+      "kickoff": "2026-07-01T20:00:00.000Z",
       "homeTeamId": "bel",
       "awayTeamId": "sen",
       "homeLabel": null,
@@ -1946,8 +1946,8 @@
       "matchNumber": 83,
       "stage": "r32",
       "groupId": null,
-      "venueId": null,
-      "kickoff": "2026-06-30T20:00:00.000Z",
+      "venueId": "bmo",
+      "kickoff": "2026-07-02T20:00:00.000Z",
       "homeTeamId": "por",
       "awayTeamId": "cro",
       "homeLabel": null,
@@ -1962,8 +1962,8 @@
       "matchNumber": 84,
       "stage": "r32",
       "groupId": null,
-      "venueId": null,
-      "kickoff": "2026-07-01T20:00:00.000Z",
+      "venueId": "sofi",
+      "kickoff": "2026-07-02T20:00:00.000Z",
       "homeTeamId": "esp",
       "awayTeamId": "aut",
       "homeLabel": null,
@@ -1978,7 +1978,7 @@
       "matchNumber": 85,
       "stage": "r32",
       "groupId": null,
-      "venueId": null,
+      "venueId": "bcplace",
       "kickoff": "2026-07-02T20:00:00.000Z",
       "homeTeamId": "sui",
       "awayTeamId": "alg",
@@ -1994,8 +1994,8 @@
       "matchNumber": 86,
       "stage": "r32",
       "groupId": null,
-      "venueId": null,
-      "kickoff": "2026-07-02T20:00:00.000Z",
+      "venueId": "hardrock",
+      "kickoff": "2026-07-03T20:00:00.000Z",
       "homeTeamId": "arg",
       "awayTeamId": "cpv",
       "homeLabel": null,
@@ -2010,7 +2010,7 @@
       "matchNumber": 87,
       "stage": "r32",
       "groupId": null,
-      "venueId": null,
+      "venueId": "arrowhead",
       "kickoff": "2026-07-03T20:00:00.000Z",
       "homeTeamId": "col",
       "awayTeamId": "gha",
@@ -2026,7 +2026,7 @@
       "matchNumber": 88,
       "stage": "r32",
       "groupId": null,
-      "venueId": null,
+      "venueId": "att",
       "kickoff": "2026-07-03T20:00:00.000Z",
       "homeTeamId": "aus",
       "awayTeamId": "egy",
@@ -2053,10 +2053,10 @@
       "awayScore": null,
       "feeders": {
         "home": {
-          "winnerOf": "R32-1"
+          "winnerOf": "R32-2"
         },
         "away": {
-          "winnerOf": "R32-3"
+          "winnerOf": "R32-5"
         }
       }
     },
@@ -2076,10 +2076,10 @@
       "awayScore": null,
       "feeders": {
         "home": {
-          "winnerOf": "R32-2"
+          "winnerOf": "R32-1"
         },
         "away": {
-          "winnerOf": "R32-5"
+          "winnerOf": "R32-3"
         }
       }
     },
@@ -2407,15 +2407,15 @@
     }
   ],
   "metadata": {
-    "source": "Wikipedia (2026 FIFA World Cup, draw) + NBC Sports & Sky Sports schedule",
+    "source": "Wikipedia (2026 FIFA World Cup group articles + knockout stage), cross-checked vs fifa.com standings",
     "sourceUrls": [
+      "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
       "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
-      "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_draw",
-      "https://www.nbcsports.com/soccer/news/2026-world-cup-schedule-confirmed-dates-times-stadiums-full-details"
+      "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage"
     ],
-    "crawledAt": "2026-06-28T14:23:55.000Z",
-    "version": "0684ea8a76e7",
+    "crawledAt": "2026-06-28T15:13:15.000Z",
+    "version": "60b138d708ca",
     "schemaVersion": 1,
-    "notes": "Group stage is final (dates, kickoff times in venue-local via UTC, venues). Knockout matchups are structural placeholders until results are known."
+    "notes": "Group stage complete — all 72 results recorded; standings compute from scores. Round of 32 resolved to qualified teams with official dates/venues; Round of 16 onward keep feeder placeholders (bracket adjacency matches FIFA). Knockout kickoff times are placeholders (16:00 ET) pending official confirmation."
   }
 }

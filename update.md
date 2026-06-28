@@ -2,9 +2,9 @@
 
 > **Purpose.** This file is the durable, self-contained instruction set for
 > re-crawling the latest FIFA World Cup 2026 data and regenerating the app's
-> dataset. It is written so that **any future session — even an AI assistant with
-> no prior context about how this app was built — can read this file and refresh
-> the data correctly.**
+> dataset. It is written so that **any future Claude Code session — even with no
+> memory of how this app was built — can read this file and refresh the data
+> correctly.**
 >
 > If you are an AI assistant and the user says *"update the World Cup data"*,
 > follow this document top to bottom.
@@ -100,7 +100,7 @@ One row per stadium. Keep the `id` stable (the schedule + matches reference it).
   A→Czechia, B→Bosnia and Herzegovina, D→Turkiye, F→Sweden, I→Iraq, K→DR Congo).
 
 ### 4c. `SCHEDULE` (group stage, 72 rows)
-`[dateET, timeET, homeName, awayName, venueId]`
+`[dateET, timeET, homeName, awayName, venueId, homeScore?, awayScore?]`
 - `dateET` / `timeET` are the **US Eastern** date & wall-clock of kickoff (the
   format NBC publishes). The generator converts ET→UTC by **+4 hours** (EDT in
   June/July) and stores a single UTC instant. The UI converts that instant to
@@ -110,21 +110,28 @@ One row per stadium. Keep the `id` stable (the schedule + matches reference it).
 - Team names must exactly match a name in `GROUPS`. The generator derives each
   match's `groupId` from the team and **throws** if the two teams aren't in the
   same group — a built-in typo guard.
-
-### 4c-results. `RESULTS` (final scores)
-To record a finished group-stage match, add one line to the `RESULTS` object:
-`"Home|Away": [homeScore, awayScore]` — keys use the **exact** home/away names
-from the matching `SCHEDULE` row. The generator sets that match's status to
-`"finished"` and fills the scores; group standings then compute automatically.
-Example: `"Mexico|South Africa": [2, 0]`. Leave a match out of `RESULTS` until it
-has actually finished.
+- **Results:** append `homeScore, awayScore` to a row once played. Any row with
+  both scores is emitted as `status: "finished"`; standings then compute
+  automatically. Scores are in the **schedule's** home/away order (not whatever
+  order a results page lists them) — verify orientation when transcribing.
+  Crawl per-group results from `…/2026_FIFA_World_Cup_Group_A` … `_Group_L`.
 
 ### 4d. Knockout bracket
-Structural placeholders (`r32`→`final` + third place) with seeding labels like
-`"1A"`, `"3rd (C/E/F/H)"`, and `feeders` linking `winnerOf`/`loserOf` earlier
-matches. To turn a slot into a real team once known, set `homeTeamId`/`awayTeamId`
-on that match (and the UI stops showing the placeholder). Update venues/exact
-pairings from the official 104-match schedule when refining.
+Built from three tables in `build-seed.mjs`: `R32` (resolved teams once the
+group stage ends), and `R16`/`QF` feeder lists. Match numbers run 73 (R32-1) →
+104 (Final).
+- **`R32`** rows: `[dateET, venueId, homeName, awayName]` — real qualified teams
+  with official dates/venues. Names must match `GROUPS`.
+- **`R16` / `QF`** rows reference the earlier match **ids** whose winners they
+  draw (`["R32-2","R32-5"]` = winners of those two). This adjacency MUST match
+  the official bracket (crawl `…/2026_FIFA_World_Cup_knockout_stage` for the
+  "winners of Match X and Match Y" mapping) — it is NOT consecutive numbering.
+- `BracketView` lays rounds out by walking this feeder tree (in-order from the
+  Final), so correct `feeders` are what make the two-sided bracket connectors
+  join the right matches. Set `homeTeamId`/`awayTeamId` on a later-round match
+  once its result resolves the slot.
+- Knockout kickoff **times** are placeholders (16:00 ET); refine from the
+  official schedule when known.
 
 ## 5. Regenerate + verify
 

@@ -73,82 +73,84 @@ for (const [g, list] of Object.entries(GROUPS)) {
 }
 
 // ---------------------------------------------------------------------------
-// GROUP-STAGE SCHEDULE  [dateET, timeET, home, away, venueId]
+// GROUP-STAGE SCHEDULE  [dateET, timeET, home, away, venueId, homeScore, awayScore]
 // dateET is the ET calendar date of kickoff (midnight games already rolled to next day).
+// Final scores appended where played (group stage complete, crawled June 2026).
+// A match with both scores present is emitted as status: "finished".
 // ---------------------------------------------------------------------------
 const SCHEDULE = [
-  ["2026-06-11", "15:00", "Mexico", "South Africa", "azteca"],
-  ["2026-06-11", "22:00", "South Korea", "Czechia", "akron"],
-  ["2026-06-12", "15:00", "Canada", "Bosnia and Herzegovina", "bmo"],
-  ["2026-06-12", "21:00", "United States", "Paraguay", "sofi"],
-  ["2026-06-13", "15:00", "Qatar", "Switzerland", "levis"],
-  ["2026-06-13", "18:00", "Brazil", "Morocco", "metlife"],
-  ["2026-06-13", "21:00", "Haiti", "Scotland", "gillette"],
-  ["2026-06-14", "00:00", "Australia", "Turkiye", "bcplace"],
-  ["2026-06-14", "13:00", "Germany", "Curacao", "nrg"],
-  ["2026-06-14", "19:00", "Ivory Coast", "Ecuador", "linc"],
-  ["2026-06-14", "16:00", "Netherlands", "Japan", "att"],
-  ["2026-06-14", "22:00", "Sweden", "Tunisia", "bbva"],
-  ["2026-06-15", "21:00", "Iran", "New Zealand", "sofi"],
-  ["2026-06-15", "15:00", "Belgium", "Egypt", "lumen"],
-  ["2026-06-15", "12:00", "Spain", "Cape Verde", "mercedes"],
-  ["2026-06-15", "18:00", "Saudi Arabia", "Uruguay", "hardrock"],
-  ["2026-06-16", "15:00", "France", "Senegal", "metlife"],
-  ["2026-06-16", "18:00", "Iraq", "Norway", "gillette"],
-  ["2026-06-16", "21:00", "Argentina", "Algeria", "arrowhead"],
-  ["2026-06-17", "00:00", "Austria", "Jordan", "levis"],
-  ["2026-06-17", "13:00", "Portugal", "DR Congo", "nrg"],
-  ["2026-06-17", "22:00", "Uzbekistan", "Colombia", "azteca"],
-  ["2026-06-17", "16:00", "England", "Croatia", "att"],
-  ["2026-06-17", "19:00", "Ghana", "Panama", "bmo"],
-  ["2026-06-18", "12:00", "Czechia", "South Africa", "mercedes"],
-  ["2026-06-18", "21:00", "Mexico", "South Korea", "akron"],
-  ["2026-06-18", "15:00", "Switzerland", "Bosnia and Herzegovina", "sofi"],
-  ["2026-06-18", "18:00", "Canada", "Qatar", "bcplace"],
-  ["2026-06-19", "18:00", "Scotland", "Morocco", "gillette"],
-  ["2026-06-19", "21:00", "Brazil", "Haiti", "linc"],
-  ["2026-06-19", "15:00", "United States", "Australia", "lumen"],
-  ["2026-06-20", "00:00", "Turkiye", "Paraguay", "levis"],
-  ["2026-06-20", "16:00", "Germany", "Ivory Coast", "bmo"],
-  ["2026-06-20", "20:00", "Ecuador", "Curacao", "arrowhead"],
-  ["2026-06-20", "13:00", "Netherlands", "Sweden", "nrg"],
-  ["2026-06-21", "00:00", "Tunisia", "Japan", "bbva"],
-  ["2026-06-21", "15:00", "Belgium", "Iran", "sofi"],
-  ["2026-06-21", "21:00", "New Zealand", "Egypt", "bcplace"],
-  ["2026-06-21", "12:00", "Spain", "Saudi Arabia", "mercedes"],
-  ["2026-06-21", "18:00", "Uruguay", "Cape Verde", "hardrock"],
-  ["2026-06-22", "17:00", "France", "Iraq", "linc"],
-  ["2026-06-22", "20:00", "Norway", "Senegal", "metlife"],
-  ["2026-06-22", "13:00", "Argentina", "Austria", "att"],
-  ["2026-06-22", "23:00", "Jordan", "Algeria", "levis"],
-  ["2026-06-23", "13:00", "Portugal", "Uzbekistan", "nrg"],
-  ["2026-06-23", "22:00", "Colombia", "DR Congo", "akron"],
-  ["2026-06-23", "16:00", "England", "Ghana", "gillette"],
-  ["2026-06-23", "19:00", "Panama", "Croatia", "bmo"],
-  ["2026-06-24", "21:00", "Czechia", "Mexico", "azteca"],
-  ["2026-06-24", "21:00", "South Africa", "South Korea", "bbva"],
-  ["2026-06-24", "15:00", "Switzerland", "Canada", "bcplace"],
-  ["2026-06-24", "15:00", "Bosnia and Herzegovina", "Qatar", "lumen"],
-  ["2026-06-24", "18:00", "Scotland", "Brazil", "hardrock"],
-  ["2026-06-24", "18:00", "Morocco", "Haiti", "mercedes"],
-  ["2026-06-25", "16:00", "Ecuador", "Germany", "metlife"],
-  ["2026-06-25", "16:00", "Curacao", "Ivory Coast", "linc"],
-  ["2026-06-25", "22:00", "Turkiye", "United States", "sofi"],
-  ["2026-06-25", "22:00", "Paraguay", "Australia", "levis"],
-  ["2026-06-25", "19:00", "Japan", "Sweden", "att"],
-  ["2026-06-25", "19:00", "Tunisia", "Netherlands", "arrowhead"],
-  ["2026-06-26", "23:00", "Egypt", "Iran", "lumen"],
-  ["2026-06-26", "23:00", "New Zealand", "Belgium", "bcplace"],
-  ["2026-06-26", "20:00", "Cape Verde", "Saudi Arabia", "nrg"],
-  ["2026-06-26", "20:00", "Uruguay", "Spain", "akron"],
-  ["2026-06-26", "15:00", "Norway", "France", "gillette"],
-  ["2026-06-26", "15:00", "Senegal", "Iraq", "bmo"],
-  ["2026-06-27", "22:00", "Algeria", "Austria", "arrowhead"],
-  ["2026-06-27", "22:00", "Jordan", "Argentina", "att"],
-  ["2026-06-27", "19:30", "Colombia", "Portugal", "hardrock"],
-  ["2026-06-27", "19:30", "DR Congo", "Uzbekistan", "mercedes"],
-  ["2026-06-27", "17:00", "Panama", "England", "metlife"],
-  ["2026-06-27", "17:00", "Croatia", "Ghana", "linc"],
+  ["2026-06-11", "15:00", "Mexico", "South Africa", "azteca", 2, 0],
+  ["2026-06-11", "22:00", "South Korea", "Czechia", "akron", 2, 1],
+  ["2026-06-12", "15:00", "Canada", "Bosnia and Herzegovina", "bmo", 1, 1],
+  ["2026-06-12", "21:00", "United States", "Paraguay", "sofi", 4, 1],
+  ["2026-06-13", "15:00", "Qatar", "Switzerland", "levis", 1, 1],
+  ["2026-06-13", "18:00", "Brazil", "Morocco", "metlife", 1, 1],
+  ["2026-06-13", "21:00", "Haiti", "Scotland", "gillette", 0, 1],
+  ["2026-06-14", "00:00", "Australia", "Turkiye", "bcplace", 2, 0],
+  ["2026-06-14", "13:00", "Germany", "Curacao", "nrg", 7, 1],
+  ["2026-06-14", "19:00", "Ivory Coast", "Ecuador", "linc", 1, 0],
+  ["2026-06-14", "16:00", "Netherlands", "Japan", "att", 2, 2],
+  ["2026-06-14", "22:00", "Sweden", "Tunisia", "bbva", 5, 1],
+  ["2026-06-15", "21:00", "Iran", "New Zealand", "sofi", 2, 2],
+  ["2026-06-15", "15:00", "Belgium", "Egypt", "lumen", 1, 1],
+  ["2026-06-15", "12:00", "Spain", "Cape Verde", "mercedes", 0, 0],
+  ["2026-06-15", "18:00", "Saudi Arabia", "Uruguay", "hardrock", 1, 1],
+  ["2026-06-16", "15:00", "France", "Senegal", "metlife", 3, 1],
+  ["2026-06-16", "18:00", "Iraq", "Norway", "gillette", 1, 4],
+  ["2026-06-16", "21:00", "Argentina", "Algeria", "arrowhead", 3, 0],
+  ["2026-06-17", "00:00", "Austria", "Jordan", "levis", 3, 1],
+  ["2026-06-17", "13:00", "Portugal", "DR Congo", "nrg", 1, 1],
+  ["2026-06-17", "22:00", "Uzbekistan", "Colombia", "azteca", 1, 3],
+  ["2026-06-17", "16:00", "England", "Croatia", "att", 4, 2],
+  ["2026-06-17", "19:00", "Ghana", "Panama", "bmo", 1, 0],
+  ["2026-06-18", "12:00", "Czechia", "South Africa", "mercedes", 1, 1],
+  ["2026-06-18", "21:00", "Mexico", "South Korea", "akron", 1, 0],
+  ["2026-06-18", "15:00", "Switzerland", "Bosnia and Herzegovina", "sofi", 4, 1],
+  ["2026-06-18", "18:00", "Canada", "Qatar", "bcplace", 6, 0],
+  ["2026-06-19", "18:00", "Scotland", "Morocco", "gillette", 0, 1],
+  ["2026-06-19", "21:00", "Brazil", "Haiti", "linc", 3, 0],
+  ["2026-06-19", "15:00", "United States", "Australia", "lumen", 2, 0],
+  ["2026-06-20", "00:00", "Turkiye", "Paraguay", "levis", 0, 1],
+  ["2026-06-20", "16:00", "Germany", "Ivory Coast", "bmo", 2, 1],
+  ["2026-06-20", "20:00", "Ecuador", "Curacao", "arrowhead", 0, 0],
+  ["2026-06-20", "13:00", "Netherlands", "Sweden", "nrg", 5, 1],
+  ["2026-06-21", "00:00", "Tunisia", "Japan", "bbva", 0, 4],
+  ["2026-06-21", "15:00", "Belgium", "Iran", "sofi", 0, 0],
+  ["2026-06-21", "21:00", "New Zealand", "Egypt", "bcplace", 1, 3],
+  ["2026-06-21", "12:00", "Spain", "Saudi Arabia", "mercedes", 4, 0],
+  ["2026-06-21", "18:00", "Uruguay", "Cape Verde", "hardrock", 2, 2],
+  ["2026-06-22", "17:00", "France", "Iraq", "linc", 3, 0],
+  ["2026-06-22", "20:00", "Norway", "Senegal", "metlife", 3, 2],
+  ["2026-06-22", "13:00", "Argentina", "Austria", "att", 2, 0],
+  ["2026-06-22", "23:00", "Jordan", "Algeria", "levis", 1, 2],
+  ["2026-06-23", "13:00", "Portugal", "Uzbekistan", "nrg", 5, 0],
+  ["2026-06-23", "22:00", "Colombia", "DR Congo", "akron", 1, 0],
+  ["2026-06-23", "16:00", "England", "Ghana", "gillette", 0, 0],
+  ["2026-06-23", "19:00", "Panama", "Croatia", "bmo", 0, 1],
+  ["2026-06-24", "21:00", "Czechia", "Mexico", "azteca", 0, 3],
+  ["2026-06-24", "21:00", "South Africa", "South Korea", "bbva", 1, 0],
+  ["2026-06-24", "15:00", "Switzerland", "Canada", "bcplace", 2, 1],
+  ["2026-06-24", "15:00", "Bosnia and Herzegovina", "Qatar", "lumen", 3, 1],
+  ["2026-06-24", "18:00", "Scotland", "Brazil", "hardrock", 0, 3],
+  ["2026-06-24", "18:00", "Morocco", "Haiti", "mercedes", 4, 2],
+  ["2026-06-25", "16:00", "Ecuador", "Germany", "metlife", 2, 1],
+  ["2026-06-25", "16:00", "Curacao", "Ivory Coast", "linc", 0, 2],
+  ["2026-06-25", "22:00", "Turkiye", "United States", "sofi", 3, 2],
+  ["2026-06-25", "22:00", "Paraguay", "Australia", "levis", 0, 0],
+  ["2026-06-25", "19:00", "Japan", "Sweden", "att", 1, 1],
+  ["2026-06-25", "19:00", "Tunisia", "Netherlands", "arrowhead", 1, 3],
+  ["2026-06-26", "23:00", "Egypt", "Iran", "lumen", 1, 1],
+  ["2026-06-26", "23:00", "New Zealand", "Belgium", "bcplace", 1, 5],
+  ["2026-06-26", "20:00", "Cape Verde", "Saudi Arabia", "nrg", 0, 0],
+  ["2026-06-26", "20:00", "Uruguay", "Spain", "akron", 0, 1],
+  ["2026-06-26", "15:00", "Norway", "France", "gillette", 1, 4],
+  ["2026-06-26", "15:00", "Senegal", "Iraq", "bmo", 5, 0],
+  ["2026-06-27", "22:00", "Algeria", "Austria", "arrowhead", 3, 3],
+  ["2026-06-27", "22:00", "Jordan", "Argentina", "att", 1, 3],
+  ["2026-06-27", "19:30", "Colombia", "Portugal", "hardrock", 0, 0],
+  ["2026-06-27", "19:30", "DR Congo", "Uzbekistan", "mercedes", 3, 1],
+  ["2026-06-27", "17:00", "Panama", "England", "metlife", 0, 2],
+  ["2026-06-27", "17:00", "Croatia", "Ghana", "linc", 2, 1],
 ];
 
 function etToUtcIso(dateET, timeET) {
@@ -158,103 +160,15 @@ function etToUtcIso(dateET, timeET) {
   return new Date(ms).toISOString();
 }
 
-// ---------------------------------------------------------------------------
-// RESULTS — final scores of completed group-stage matches.
-// Key: "Home|Away" exactly as written in SCHEDULE. Value: [homeScore, awayScore].
-// Add a line here as each match finishes; the generator marks it "finished".
-// ---------------------------------------------------------------------------
-const RESULTS = {
-  "Mexico|South Africa": [2, 0],
-  "South Korea|Czechia": [2, 1],
-  "Canada|Bosnia and Herzegovina": [1, 1],
-  "United States|Paraguay": [4, 1],
-  "Qatar|Switzerland": [1, 1],
-  "Brazil|Morocco": [1, 1],
-  "Haiti|Scotland": [0, 1],
-  "Australia|Turkiye": [2, 0],
-  "Germany|Curacao": [7, 1],
-  "Ivory Coast|Ecuador": [1, 0],
-  "Sweden|Tunisia": [5, 1],
-  "Netherlands|Japan": [2, 2],
-  "Iran|New Zealand": [2, 2],
-  "Belgium|Egypt": [1, 1],
-  "Spain|Cape Verde": [0, 0],
-  "Saudi Arabia|Uruguay": [1, 1],
-  "France|Senegal": [3, 1],
-  "Iraq|Norway": [1, 4],
-  "Argentina|Algeria": [3, 0],
-  "Austria|Jordan": [3, 1],
-  "Portugal|DR Congo": [1, 1],
-  "Uzbekistan|Colombia": [1, 3],
-  "England|Croatia": [4, 2],
-  "Ghana|Panama": [1, 0],
-  "Czechia|South Africa": [1, 1],
-  "Switzerland|Bosnia and Herzegovina": [4, 1],
-  "Canada|Qatar": [6, 0],
-  "Mexico|South Korea": [1, 0],
-  "United States|Australia": [2, 0],
-  "Scotland|Morocco": [0, 1],
-  "Brazil|Haiti": [3, 0],
-  "Turkiye|Paraguay": [0, 1],
-  "Germany|Ivory Coast": [2, 1],
-  "Ecuador|Curacao": [0, 0],
-  "Netherlands|Sweden": [5, 1],
-  "Tunisia|Japan": [0, 4],
-  "Belgium|Iran": [0, 0],
-  "New Zealand|Egypt": [1, 3],
-  "Spain|Saudi Arabia": [4, 0],
-  "Uruguay|Cape Verde": [2, 2],
-  "France|Iraq": [3, 0],
-  "Norway|Senegal": [3, 2],
-  "Argentina|Austria": [2, 0],
-  "Jordan|Algeria": [1, 2],
-  "Portugal|Uzbekistan": [5, 0],
-  "Colombia|DR Congo": [1, 0],
-  "England|Ghana": [0, 0],
-  "Panama|Croatia": [0, 1],
-  "Czechia|Mexico": [0, 3],
-  "South Africa|South Korea": [1, 0],
-  "Switzerland|Canada": [2, 1],
-  "Bosnia and Herzegovina|Qatar": [3, 1],
-  "Scotland|Brazil": [0, 3],
-  "Morocco|Haiti": [4, 2],
-  "Ecuador|Germany": [2, 1],
-  "Curacao|Ivory Coast": [0, 2],
-  "Turkiye|United States": [3, 2],
-  "Paraguay|Australia": [0, 0],
-  "Japan|Sweden": [1, 1],
-  "Tunisia|Netherlands": [1, 3],
-  "Egypt|Iran": [1, 1],
-  "New Zealand|Belgium": [1, 5],
-  "Cape Verde|Saudi Arabia": [0, 0],
-  "Uruguay|Spain": [0, 1],
-  "Norway|France": [1, 4],
-  "Senegal|Iraq": [5, 0],
-  "Algeria|Austria": [3, 3],
-  "Jordan|Argentina": [1, 3],
-  "Colombia|Portugal": [0, 0],
-  "DR Congo|Uzbekistan": [3, 1],
-  "Panama|England": [0, 2],
-  "Croatia|Ghana": [2, 1],
-};
-
-const scheduleResultKeys = new Set(SCHEDULE.map(([, , home, away]) => `${home}|${away}`));
-for (const [key, score] of Object.entries(RESULTS)) {
-  if (!scheduleResultKeys.has(key)) throw new Error(`Result does not match a scheduled fixture: ${key}`);
-  if (!Array.isArray(score) || score.length !== 2 || score.some((value) => !Number.isInteger(value) || value < 0)) {
-    throw new Error(`Invalid result for ${key}: ${JSON.stringify(score)}`);
-  }
-}
-
 const matches = [];
 let n = 1;
-for (const [dateET, timeET, home, away, venueId] of SCHEDULE) {
+for (const [dateET, timeET, home, away, venueId, homeScore, awayScore] of SCHEDULE) {
   const h = teamByName.get(home);
   const a = teamByName.get(away);
   if (!h) throw new Error(`Unknown home team: ${home}`);
   if (!a) throw new Error(`Unknown away team: ${away}`);
   if (h.groupId !== a.groupId) throw new Error(`Cross-group match: ${home} vs ${away}`);
-  const result = RESULTS[`${home}|${away}`] ?? null;
+  const played = homeScore != null && awayScore != null;
   matches.push({
     id: `M${String(n).padStart(2, "0")}`,
     matchNumber: n,
@@ -266,164 +180,97 @@ for (const [dateET, timeET, home, away, venueId] of SCHEDULE) {
     awayTeamId: a.id,
     homeLabel: null,
     awayLabel: null,
-    status: result ? "finished" : "scheduled",
-    homeScore: result ? result[0] : null,
-    awayScore: result ? result[1] : null,
+    status: played ? "finished" : "scheduled",
+    homeScore: played ? homeScore : null,
+    awayScore: played ? awayScore : null,
   });
   n++;
 }
 
-function standingsForGroup(groupId) {
-  const groupTeamIds = teams.filter((team) => team.groupId === groupId).map((team) => team.id);
-  const seedOrder = new Map(groupTeamIds.map((id, index) => [id, index]));
-  const rows = new Map(groupTeamIds.map((id) => [id, {
-    teamId: id,
-    played: 0,
-    points: 0,
-    goalsFor: 0,
-    goalsAgainst: 0,
-  }]));
-
-  for (const match of matches.filter((m) => m.stage === "group" && m.groupId === groupId && m.status === "finished")) {
-    const home = rows.get(match.homeTeamId);
-    const away = rows.get(match.awayTeamId);
-    if (!home || !away) continue;
-
-    home.played += 1;
-    away.played += 1;
-    home.goalsFor += match.homeScore;
-    home.goalsAgainst += match.awayScore;
-    away.goalsFor += match.awayScore;
-    away.goalsAgainst += match.homeScore;
-
-    if (match.homeScore > match.awayScore) {
-      home.points += 3;
-    } else if (match.homeScore < match.awayScore) {
-      away.points += 3;
-    } else {
-      home.points += 1;
-      away.points += 1;
-    }
-  }
-
-  return [...rows.values()].sort((a, b) => (
-    b.points - a.points ||
-    (b.goalsFor - b.goalsAgainst) - (a.goalsFor - a.goalsAgainst) ||
-    b.goalsFor - a.goalsFor ||
-    seedOrder.get(a.teamId) - seedOrder.get(b.teamId)
-  ));
-}
-
-const completedGroupSlots = new Map();
-for (const groupId of Object.keys(GROUPS)) {
-  const groupMatches = matches.filter((match) => match.stage === "group" && match.groupId === groupId);
-  if (groupMatches.length === 6 && groupMatches.every((match) => match.status === "finished")) {
-    standingsForGroup(groupId).forEach((row, index) => {
-      completedGroupSlots.set(`${index + 1}${groupId}`, row.teamId);
-    });
-  }
-}
-
-const thirdPlaceSlotAllocations = new Map([
-  ["3rd (A/B/C/D/F)", "3D"],
-  ["3rd (C/D/F/G/H)", "3F"],
-  ["3rd (C/E/F/H/I)", "3E"],
-  ["3rd (E/H/I/J/K)", "3K"],
-  ["3rd (B/E/F/I/J)", "3B"],
-  ["3rd (A/E/H/I/J)", "3I"],
-  ["3rd (E/F/G/I/J)", "3J"],
-  ["3rd (D/E/I/J/L)", "3L"],
-]);
-
-function resolveCompletedGroupSlot(label) {
-  const slotLabel = thirdPlaceSlotAllocations.get(label) ?? label;
-  return completedGroupSlots.get(slotLabel) ?? null;
-}
-
 // ---------------------------------------------------------------------------
-// KNOCKOUT BRACKET  (structural placeholders; exact pairings/venues per update.md)
+// KNOCKOUT BRACKET
+// Round of 32 teams are resolved (group stage complete). Later rounds keep
+// feeder placeholders. Match numbers continue 73 (R32) → 104 (Final).
+// Feeder adjacency mirrors the official bracket (FIFA / Wikipedia knockout
+// stage): a match references the earlier match ids whose winners (or losers)
+// it draws from — NOT simply consecutive numbers.
 // ---------------------------------------------------------------------------
-function ko(id, stage, kickoff, venueId, homeLabel, awayLabel) {
+function ko(id, stage, kickoff, venueId, { home = null, away = null, feeders = null } = {}) {
   return {
     id, matchNumber: n++, stage, groupId: null, venueId,
-    kickoff, homeTeamId: null, awayTeamId: null,
-    homeLabel, awayLabel, status: "scheduled", homeScore: null, awayScore: null,
-    feeders: null,
+    kickoff,
+    homeTeamId: home, awayTeamId: away,
+    homeLabel: null, awayLabel: null,
+    status: "scheduled", homeScore: null, awayScore: null,
+    feeders,
   };
 }
-function feeders(match, home, away) {
-  match.feeders = { home, away };
-  return match;
-}
+const tid = (name) => {
+  const t = teamByName.get(name);
+  if (!t) throw new Error(`Unknown knockout team: ${name}`);
+  return t.id;
+};
+const W = (id) => ({ winnerOf: id });
+const L = (id) => ({ loserOf: id });
 
 const knockout = [];
-// Round of 32 — 16 matches, June 28 – July 3. Venues TBD until update.
-const r32Labels = [
-  ["2A", "2B"],
-  ["1E", "3rd (A/B/C/D/F)"],
-  ["1F", "2C"],
-  ["1C", "2F"],
-  ["1I", "3rd (C/D/F/G/H)"],
-  ["2E", "2I"],
-  ["1A", "3rd (C/E/F/H/I)"],
-  ["1L", "3rd (E/H/I/J/K)"],
-  ["1D", "3rd (B/E/F/I/J)"],
-  ["1G", "3rd (A/E/H/I/J)"],
-  ["2K", "2L"],
-  ["1H", "2J"],
-  ["1B", "3rd (E/F/G/I/J)"],
-  ["1J", "2H"],
-  ["1K", "3rd (D/E/I/J/L)"],
-  ["2D", "2G"],
+
+// Round of 32 — matches 73–88. [date, venueId, homeName, awayName]
+const R32 = [
+  ["2026-06-28", "sofi", "South Africa", "Canada"],                 // R32-1  (M73)
+  ["2026-06-29", "gillette", "Germany", "Paraguay"],                // R32-2  (M74)
+  ["2026-06-29", "bbva", "Netherlands", "Morocco"],                 // R32-3  (M75)
+  ["2026-06-29", "nrg", "Brazil", "Japan"],                         // R32-4  (M76)
+  ["2026-06-30", "metlife", "France", "Sweden"],                    // R32-5  (M77)
+  ["2026-06-30", "att", "Ivory Coast", "Norway"],                   // R32-6  (M78)
+  ["2026-06-30", "azteca", "Mexico", "Ecuador"],                    // R32-7  (M79)
+  ["2026-07-01", "mercedes", "England", "DR Congo"],                // R32-8  (M80)
+  ["2026-07-01", "levis", "United States", "Bosnia and Herzegovina"], // R32-9  (M81)
+  ["2026-07-01", "lumen", "Belgium", "Senegal"],                    // R32-10 (M82)
+  ["2026-07-02", "bmo", "Portugal", "Croatia"],                     // R32-11 (M83)
+  ["2026-07-02", "sofi", "Spain", "Austria"],                       // R32-12 (M84)
+  ["2026-07-02", "bcplace", "Switzerland", "Algeria"],              // R32-13 (M85)
+  ["2026-07-03", "hardrock", "Argentina", "Cape Verde"],            // R32-14 (M86)
+  ["2026-07-03", "arrowhead", "Colombia", "Ghana"],                 // R32-15 (M87)
+  ["2026-07-03", "att", "Australia", "Egypt"],                      // R32-16 (M88)
 ];
-const r32Dates = ["2026-06-28","2026-06-29","2026-06-29","2026-06-30","2026-06-30","2026-07-01","2026-07-01","2026-07-02","2026-06-28","2026-06-29","2026-06-30","2026-07-01","2026-07-02","2026-07-02","2026-07-03","2026-07-03"];
-for (let i = 0; i < 16; i++) {
-  const [homeLabel, awayLabel] = r32Labels[i];
-  const match = ko(`R32-${i + 1}`, "r32", etToUtcIso(r32Dates[i], "16:00"), null, homeLabel, awayLabel);
-  match.homeTeamId = resolveCompletedGroupSlot(homeLabel);
-  match.awayTeamId = resolveCompletedGroupSlot(awayLabel);
-  match.homeLabel = match.homeTeamId ? null : homeLabel;
-  match.awayLabel = match.awayTeamId ? null : awayLabel;
-  knockout.push(match);
-}
-// Round of 16 — 8 matches, July 4–7. Feeders follow official Match 89–96 order.
-const r16Dates = ["2026-07-04","2026-07-04","2026-07-05","2026-07-05","2026-07-06","2026-07-06","2026-07-07","2026-07-07"];
-const r16Feeders = [
-  ["R32-1", "R32-3"],
-  ["R32-2", "R32-5"],
-  ["R32-4", "R32-6"],
-  ["R32-7", "R32-8"],
-  ["R32-11", "R32-12"],
-  ["R32-9", "R32-10"],
-  ["R32-14", "R32-16"],
-  ["R32-13", "R32-15"],
+R32.forEach(([date, venueId, home, away], i) => {
+  knockout.push(ko(`R32-${i + 1}`, "r32", etToUtcIso(date, "16:00"), venueId, { home: tid(home), away: tid(away) }));
+});
+
+// Round of 16 — matches 89–96. Each draws the winners of two R32 matches.
+const R16 = [
+  ["2026-07-04", ["R32-2", "R32-5"]],   // M89
+  ["2026-07-04", ["R32-1", "R32-3"]],   // M90
+  ["2026-07-05", ["R32-4", "R32-6"]],   // M91
+  ["2026-07-05", ["R32-7", "R32-8"]],   // M92
+  ["2026-07-06", ["R32-11", "R32-12"]], // M93
+  ["2026-07-06", ["R32-9", "R32-10"]],  // M94
+  ["2026-07-07", ["R32-14", "R32-16"]], // M95
+  ["2026-07-07", ["R32-13", "R32-15"]], // M96
 ];
-for (let i = 0; i < 8; i++) {
-  const m = ko(`R16-${i + 1}`, "r16", etToUtcIso(r16Dates[i], "16:00"), null, null, null);
-  feeders(m, { winnerOf: r16Feeders[i][0] }, { winnerOf: r16Feeders[i][1] });
-  knockout.push(m);
-}
-// Quarter-finals — 4 matches, July 9–11.
-const qfDates = ["2026-07-09","2026-07-10","2026-07-11","2026-07-11"];
-const qfFeeders = [
-  ["R16-1", "R16-2"],
-  ["R16-5", "R16-6"],
-  ["R16-3", "R16-4"],
-  ["R16-7", "R16-8"],
+R16.forEach(([date, [h, a]], i) => {
+  knockout.push(ko(`R16-${i + 1}`, "r16", etToUtcIso(date, "16:00"), null, { feeders: { home: W(h), away: W(a) } }));
+});
+
+// Quarter-finals — matches 97–100.
+const QF = [
+  ["2026-07-09", ["R16-1", "R16-2"]],   // M97
+  ["2026-07-10", ["R16-5", "R16-6"]],   // M98
+  ["2026-07-11", ["R16-3", "R16-4"]],   // M99
+  ["2026-07-11", ["R16-7", "R16-8"]],   // M100
 ];
-for (let i = 0; i < 4; i++) {
-  const m = ko(`QF-${i + 1}`, "qf", etToUtcIso(qfDates[i], "16:00"), null, null, null);
-  feeders(m, { winnerOf: qfFeeders[i][0] }, { winnerOf: qfFeeders[i][1] });
-  knockout.push(m);
-}
-// Semi-finals — 2 matches, July 14–15.
-const sf1 = feeders(ko("SF-1", "sf", etToUtcIso("2026-07-14", "15:00"), null, null, null), { winnerOf: "QF-1" }, { winnerOf: "QF-2" });
-const sf2 = feeders(ko("SF-2", "sf", etToUtcIso("2026-07-15", "15:00"), null, null, null), { winnerOf: "QF-3" }, { winnerOf: "QF-4" });
-knockout.push(sf1, sf2);
-// Third place — July 18, Hard Rock Stadium, Miami, 17:00 ET.
-knockout.push(feeders(ko("TP", "third", etToUtcIso("2026-07-18", "17:00"), "hardrock", null, null), { loserOf: "SF-1" }, { loserOf: "SF-2" }));
-// Final — July 19, MetLife Stadium, NY/NJ, 15:00 ET.
-knockout.push(feeders(ko("FINAL", "final", etToUtcIso("2026-07-19", "15:00"), "metlife", null, null), { winnerOf: "SF-1" }, { winnerOf: "SF-2" }));
+QF.forEach(([date, [h, a]], i) => {
+  knockout.push(ko(`QF-${i + 1}`, "qf", etToUtcIso(date, "16:00"), null, { feeders: { home: W(h), away: W(a) } }));
+});
+
+// Semi-finals — matches 101–102.
+knockout.push(ko("SF-1", "sf", etToUtcIso("2026-07-14", "15:00"), null, { feeders: { home: W("QF-1"), away: W("QF-2") } }));
+knockout.push(ko("SF-2", "sf", etToUtcIso("2026-07-15", "15:00"), null, { feeders: { home: W("QF-3"), away: W("QF-4") } }));
+// Third place — match 103, July 18, Hard Rock Stadium, Miami.
+knockout.push(ko("TP", "third", etToUtcIso("2026-07-18", "17:00"), "hardrock", { feeders: { home: L("SF-1"), away: L("SF-2") } }));
+// Final — match 104, July 19, MetLife Stadium, NY/NJ.
+knockout.push(ko("FINAL", "final", etToUtcIso("2026-07-19", "15:00"), "metlife", { feeders: { home: W("SF-1"), away: W("SF-2") } }));
 
 const allMatches = [...matches, ...knockout];
 
@@ -458,18 +305,20 @@ const payload = {
 const hash = createHash("sha256").update(JSON.stringify(payload)).digest("hex").slice(0, 12);
 
 payload.metadata = {
-  source: "Wikipedia (2026 FIFA World Cup, draw) + NBC Sports & Sky Sports schedule",
+  source: "Wikipedia (2026 FIFA World Cup group articles + knockout stage), cross-checked vs fifa.com standings",
   sourceUrls: [
+    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
-    "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_draw",
-    "https://www.nbcsports.com/soccer/news/2026-world-cup-schedule-confirmed-dates-times-stadiums-full-details",
+    "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage",
   ],
   crawledAt: CRAWLED_AT,
   version: hash,
   schemaVersion: 1,
   notes:
-    "Group stage is final (dates, kickoff times in venue-local via UTC, venues). " +
-    "Knockout matchups are structural placeholders until results are known.",
+    "Group stage complete — all 72 results recorded; standings compute from scores. " +
+    "Round of 32 resolved to qualified teams with official dates/venues; " +
+    "Round of 16 onward keep feeder placeholders (bracket adjacency matches FIFA). " +
+    "Knockout kickoff times are placeholders (16:00 ET) pending official confirmation.",
 };
 
 const outDir = resolve(ROOT, "public/data");

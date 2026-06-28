@@ -230,6 +230,12 @@ const RESULTS = {
   "Uruguay|Spain": [0, 1],
   "Norway|France": [1, 4],
   "Senegal|Iraq": [5, 0],
+  "Algeria|Austria": [3, 3],
+  "Jordan|Argentina": [1, 3],
+  "Colombia|Portugal": [0, 0],
+  "DR Congo|Uzbekistan": [3, 1],
+  "Panama|England": [0, 2],
+  "Croatia|Ghana": [2, 1],
 };
 
 const scheduleResultKeys = new Set(SCHEDULE.map(([, , home, away]) => `${home}|${away}`));
@@ -318,8 +324,20 @@ for (const groupId of Object.keys(GROUPS)) {
   }
 }
 
+const thirdPlaceSlotAllocations = new Map([
+  ["3rd (A/B/C/D/F)", "3D"],
+  ["3rd (C/D/F/G/H)", "3F"],
+  ["3rd (C/E/F/H/I)", "3E"],
+  ["3rd (E/H/I/J/K)", "3K"],
+  ["3rd (B/E/F/I/J)", "3B"],
+  ["3rd (A/E/H/I/J)", "3I"],
+  ["3rd (E/F/G/I/J)", "3J"],
+  ["3rd (D/E/I/J/L)", "3L"],
+]);
+
 function resolveCompletedGroupSlot(label) {
-  return completedGroupSlots.get(label) ?? null;
+  const slotLabel = thirdPlaceSlotAllocations.get(label) ?? label;
+  return completedGroupSlots.get(slotLabel) ?? null;
 }
 
 // ---------------------------------------------------------------------------

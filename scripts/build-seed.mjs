@@ -195,13 +195,14 @@ for (const [dateET, timeET, home, away, venueId, homeScore, awayScore] of SCHEDU
 // stage): a match references the earlier match ids whose winners (or losers)
 // it draws from — NOT simply consecutive numbers.
 // ---------------------------------------------------------------------------
-function ko(id, stage, kickoff, venueId, { home = null, away = null, feeders = null } = {}) {
+function ko(id, stage, kickoff, venueId, { home = null, away = null, feeders = null, homeScore = null, awayScore = null } = {}) {
+  const played = homeScore != null && awayScore != null;
   return {
     id, matchNumber: n++, stage, groupId: null, venueId,
     kickoff,
     homeTeamId: home, awayTeamId: away,
     homeLabel: null, awayLabel: null,
-    status: "scheduled", homeScore: null, awayScore: null,
+    status: played ? "finished" : "scheduled", homeScore, awayScore,
     feeders,
   };
 }
@@ -215,62 +216,66 @@ const L = (id) => ({ loserOf: id });
 
 const knockout = [];
 
-// Round of 32 — matches 73–88. [date, venueId, homeName, awayName]
+// Round of 32 — matches 73–88. [UTC kickoff, venueId, homeName, awayName, homeScore, awayScore]
 const R32 = [
-  ["2026-06-28", "sofi", "South Africa", "Canada"],                 // R32-1  (M73)
-  ["2026-06-29", "gillette", "Germany", "Paraguay"],                // R32-2  (M74)
-  ["2026-06-29", "bbva", "Netherlands", "Morocco"],                 // R32-3  (M75)
-  ["2026-06-29", "nrg", "Brazil", "Japan"],                         // R32-4  (M76)
-  ["2026-06-30", "metlife", "France", "Sweden"],                    // R32-5  (M77)
-  ["2026-06-30", "att", "Ivory Coast", "Norway"],                   // R32-6  (M78)
-  ["2026-06-30", "azteca", "Mexico", "Ecuador"],                    // R32-7  (M79)
-  ["2026-07-01", "mercedes", "England", "DR Congo"],                // R32-8  (M80)
-  ["2026-07-01", "levis", "United States", "Bosnia and Herzegovina"], // R32-9  (M81)
-  ["2026-07-01", "lumen", "Belgium", "Senegal"],                    // R32-10 (M82)
-  ["2026-07-02", "bmo", "Portugal", "Croatia"],                     // R32-11 (M83)
-  ["2026-07-02", "sofi", "Spain", "Austria"],                       // R32-12 (M84)
-  ["2026-07-02", "bcplace", "Switzerland", "Algeria"],              // R32-13 (M85)
-  ["2026-07-03", "hardrock", "Argentina", "Cape Verde"],            // R32-14 (M86)
-  ["2026-07-03", "arrowhead", "Colombia", "Ghana"],                 // R32-15 (M87)
-  ["2026-07-03", "att", "Australia", "Egypt"],                      // R32-16 (M88)
+  ["2026-06-28T19:00:00.000Z", "sofi", "South Africa", "Canada", 0, 1], // R32-1  (M73)
+  ["2026-06-29T20:30:00.000Z", "gillette", "Germany", "Paraguay"],       // R32-2  (M74)
+  ["2026-06-30T01:00:00.000Z", "bbva", "Netherlands", "Morocco"],        // R32-3  (M75)
+  ["2026-06-29T17:00:00.000Z", "nrg", "Brazil", "Japan"],                // R32-4  (M76)
+  ["2026-06-30T21:00:00.000Z", "metlife", "France", "Sweden"],           // R32-5  (M77)
+  ["2026-06-30T17:00:00.000Z", "att", "Ivory Coast", "Norway"],          // R32-6  (M78)
+  ["2026-07-01T01:00:00.000Z", "azteca", "Mexico", "Ecuador"],           // R32-7  (M79)
+  ["2026-07-01T16:00:00.000Z", "mercedes", "England", "DR Congo"],       // R32-8  (M80)
+  ["2026-07-02T00:00:00.000Z", "levis", "United States", "Bosnia and Herzegovina"], // R32-9  (M81)
+  ["2026-07-01T20:00:00.000Z", "lumen", "Belgium", "Senegal"],           // R32-10 (M82)
+  ["2026-07-02T23:00:00.000Z", "bmo", "Portugal", "Croatia"],            // R32-11 (M83)
+  ["2026-07-02T19:00:00.000Z", "sofi", "Spain", "Austria"],              // R32-12 (M84)
+  ["2026-07-03T03:00:00.000Z", "bcplace", "Switzerland", "Algeria"],     // R32-13 (M85)
+  ["2026-07-03T22:00:00.000Z", "hardrock", "Argentina", "Cape Verde"],   // R32-14 (M86)
+  ["2026-07-04T01:30:00.000Z", "arrowhead", "Colombia", "Ghana"],        // R32-15 (M87)
+  ["2026-07-03T18:00:00.000Z", "att", "Australia", "Egypt"],             // R32-16 (M88)
 ];
-R32.forEach(([date, venueId, home, away], i) => {
-  knockout.push(ko(`R32-${i + 1}`, "r32", etToUtcIso(date, "16:00"), venueId, { home: tid(home), away: tid(away) }));
+R32.forEach(([kickoff, venueId, home, away, homeScore, awayScore], i) => {
+  knockout.push(ko(`R32-${i + 1}`, "r32", kickoff, venueId, { home: tid(home), away: tid(away), homeScore, awayScore }));
 });
 
 // Round of 16 — matches 89–96. Each draws the winners of two R32 matches.
 const R16 = [
-  ["2026-07-04", ["R32-2", "R32-5"]],   // M89
-  ["2026-07-04", ["R32-1", "R32-3"]],   // M90
-  ["2026-07-05", ["R32-4", "R32-6"]],   // M91
-  ["2026-07-05", ["R32-7", "R32-8"]],   // M92
-  ["2026-07-06", ["R32-11", "R32-12"]], // M93
-  ["2026-07-06", ["R32-9", "R32-10"]],  // M94
-  ["2026-07-07", ["R32-14", "R32-16"]], // M95
-  ["2026-07-07", ["R32-13", "R32-15"]], // M96
+  ["2026-07-04T21:00:00.000Z", "linc", ["R32-2", "R32-5"]],                 // M89
+  ["2026-07-04T17:00:00.000Z", "nrg", ["R32-1", "R32-3"], "Canada", null], // M90
+  ["2026-07-05T20:00:00.000Z", "metlife", ["R32-4", "R32-6"]],             // M91
+  ["2026-07-06T00:00:00.000Z", "azteca", ["R32-7", "R32-8"]],              // M92
+  ["2026-07-06T19:00:00.000Z", "att", ["R32-11", "R32-12"]],               // M93
+  ["2026-07-07T00:00:00.000Z", "lumen", ["R32-9", "R32-10"]],              // M94
+  ["2026-07-07T16:00:00.000Z", "mercedes", ["R32-14", "R32-16"]],          // M95
+  ["2026-07-07T20:00:00.000Z", "bcplace", ["R32-13", "R32-15"]],           // M96
 ];
-R16.forEach(([date, [h, a]], i) => {
-  knockout.push(ko(`R16-${i + 1}`, "r16", etToUtcIso(date, "16:00"), null, { feeders: { home: W(h), away: W(a) } }));
+R16.forEach(([kickoff, venueId, [h, a], home, away], i) => {
+  knockout.push(ko(`R16-${i + 1}`, "r16", kickoff, venueId, {
+    home: home ? tid(home) : null,
+    away: away ? tid(away) : null,
+    feeders: { home: W(h), away: W(a) },
+  }));
 });
 
 // Quarter-finals — matches 97–100.
 const QF = [
-  ["2026-07-09", ["R16-1", "R16-2"]],   // M97
-  ["2026-07-10", ["R16-5", "R16-6"]],   // M98
-  ["2026-07-11", ["R16-3", "R16-4"]],   // M99
-  ["2026-07-11", ["R16-7", "R16-8"]],   // M100
+  ["2026-07-09T20:00:00.000Z", "gillette", ["R16-1", "R16-2"]], // M97
+  ["2026-07-10T19:00:00.000Z", "sofi", ["R16-5", "R16-6"]],     // M98
+  ["2026-07-11T21:00:00.000Z", "hardrock", ["R16-3", "R16-4"]], // M99
+  ["2026-07-12T01:00:00.000Z", "arrowhead", ["R16-7", "R16-8"]], // M100
 ];
-QF.forEach(([date, [h, a]], i) => {
-  knockout.push(ko(`QF-${i + 1}`, "qf", etToUtcIso(date, "16:00"), null, { feeders: { home: W(h), away: W(a) } }));
+QF.forEach(([kickoff, venueId, [h, a]], i) => {
+  knockout.push(ko(`QF-${i + 1}`, "qf", kickoff, venueId, { feeders: { home: W(h), away: W(a) } }));
 });
 
 // Semi-finals — matches 101–102.
-knockout.push(ko("SF-1", "sf", etToUtcIso("2026-07-14", "15:00"), null, { feeders: { home: W("QF-1"), away: W("QF-2") } }));
-knockout.push(ko("SF-2", "sf", etToUtcIso("2026-07-15", "15:00"), null, { feeders: { home: W("QF-3"), away: W("QF-4") } }));
+knockout.push(ko("SF-1", "sf", "2026-07-14T19:00:00.000Z", "att", { feeders: { home: W("QF-1"), away: W("QF-2") } }));
+knockout.push(ko("SF-2", "sf", "2026-07-15T19:00:00.000Z", "mercedes", { feeders: { home: W("QF-3"), away: W("QF-4") } }));
 // Third place — match 103, July 18, Hard Rock Stadium, Miami.
-knockout.push(ko("TP", "third", etToUtcIso("2026-07-18", "17:00"), "hardrock", { feeders: { home: L("SF-1"), away: L("SF-2") } }));
+knockout.push(ko("TP", "third", "2026-07-18T21:00:00.000Z", "hardrock", { feeders: { home: L("SF-1"), away: L("SF-2") } }));
 // Final — match 104, July 19, MetLife Stadium, NY/NJ.
-knockout.push(ko("FINAL", "final", etToUtcIso("2026-07-19", "15:00"), "metlife", { feeders: { home: W("SF-1"), away: W("SF-2") } }));
+knockout.push(ko("FINAL", "final", "2026-07-19T19:00:00.000Z", "metlife", { feeders: { home: W("SF-1"), away: W("SF-2") } }));
 
 const allMatches = [...matches, ...knockout];
 
@@ -308,8 +313,12 @@ payload.metadata = {
   source: "Wikipedia (2026 FIFA World Cup group articles + knockout stage), cross-checked vs fifa.com standings",
   sourceUrls: [
     "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
+    "https://digitalhub.fifa.com/m/1be9ce37eb98fcc5/original/FWC26-Match-Schedule_English.pdf",
+    "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021518",
+    "https://fdp.fifa.org/assetspublic/ce281/r12527/pdf/FullTimeMatchReport-English.pdf",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage",
+    "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_round_of_32",
   ],
   crawledAt: CRAWLED_AT,
   version: hash,
@@ -317,8 +326,9 @@ payload.metadata = {
   notes:
     "Group stage complete — all 72 results recorded; standings compute from scores. " +
     "Round of 32 resolved to qualified teams with official dates/venues; " +
-    "Round of 16 onward keep feeder placeholders (bracket adjacency matches FIFA). " +
-    "Knockout kickoff times are placeholders (16:00 ET) pending official confirmation.",
+    "Match 73 complete: Canada advanced over South Africa. " +
+    "Round of 16 onward keep feeder placeholders unless a source position is fixed. " +
+    "Knockout kickoff times are exact UTC instants cross-checked against FIFA-linked match pages.",
 };
 
 const outDir = resolve(ROOT, "public/data");

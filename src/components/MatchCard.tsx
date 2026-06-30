@@ -7,7 +7,7 @@ import { formatDateTime, zoneAbbr } from "@/lib/time";
 import { Countdown } from "./Countdown";
 import { StageBadge, cn } from "./ui";
 
-function TeamRow({ side, score }: { side: Side; score: number | null }) {
+function TeamRow({ side, score, penalties }: { side: Side; score: number | null; penalties?: number | null }) {
   const placeholder = !side.team;
   return (
     <div className="flex items-center gap-2.5">
@@ -15,7 +15,12 @@ function TeamRow({ side, score }: { side: Side; score: number | null }) {
       <span className={cn("truncate text-sm font-semibold", placeholder ? "italic text-ink-muted" : "text-ink")}>
         {side.label}
       </span>
-      {score != null && <span className="ml-auto h-display text-lg tabular-nums text-ink">{score}</span>}
+      {score != null && (
+        <span className="ml-auto h-display text-lg tabular-nums text-ink">
+          {score}
+          {penalties != null && <span className="ml-1 text-xs text-ink-faint">({penalties})</span>}
+        </span>
+      )}
     </div>
   );
 }
@@ -40,9 +45,9 @@ export function MatchCard({ match }: { match: Match }) {
       </div>
 
       <div className="space-y-2">
-        <TeamRow side={home} score={match.homeScore} />
+        <TeamRow side={home} score={match.homeScore} penalties={match.homePenalties} />
         <div className="ml-1 h-px bg-white/5" />
-        <TeamRow side={away} score={match.awayScore} />
+        <TeamRow side={away} score={match.awayScore} penalties={match.awayPenalties} />
       </div>
 
       <div className="mt-3 flex items-center justify-between gap-2 text-xs text-ink-muted">

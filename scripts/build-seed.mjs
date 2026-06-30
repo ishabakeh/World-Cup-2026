@@ -195,7 +195,13 @@ for (const [dateET, timeET, home, away, venueId, homeScore, awayScore] of SCHEDU
 // stage): a match references the earlier match ids whose winners (or losers)
 // it draws from — NOT simply consecutive numbers.
 // ---------------------------------------------------------------------------
-function ko(id, stage, kickoff, venueId, { home = null, away = null, feeders = null, homeScore = null, awayScore = null } = {}) {
+function ko(
+  id,
+  stage,
+  kickoff,
+  venueId,
+  { home = null, away = null, feeders = null, homeScore = null, awayScore = null, homePenalties = null, awayPenalties = null } = {},
+) {
   const played = homeScore != null && awayScore != null;
   return {
     id, matchNumber: n++, stage, groupId: null, venueId,
@@ -203,6 +209,8 @@ function ko(id, stage, kickoff, venueId, { home = null, away = null, feeders = n
     homeTeamId: home, awayTeamId: away,
     homeLabel: null, awayLabel: null,
     status: played ? "finished" : "scheduled", homeScore, awayScore,
+    homePenalties,
+    awayPenalties,
     feeders,
   };
 }
@@ -216,12 +224,13 @@ const L = (id) => ({ loserOf: id });
 
 const knockout = [];
 
-// Round of 32 — matches 73–88. [UTC kickoff, venueId, homeName, awayName, homeScore, awayScore]
+// Round of 32 — matches 73–88.
+// [UTC kickoff, venueId, homeName, awayName, homeScore, awayScore, homePenalties, awayPenalties]
 const R32 = [
   ["2026-06-28T19:00:00.000Z", "sofi", "South Africa", "Canada", 0, 1], // R32-1  (M73)
-  ["2026-06-29T20:30:00.000Z", "gillette", "Germany", "Paraguay"],       // R32-2  (M74)
-  ["2026-06-30T01:00:00.000Z", "bbva", "Netherlands", "Morocco"],        // R32-3  (M75)
-  ["2026-06-29T17:00:00.000Z", "nrg", "Brazil", "Japan"],                // R32-4  (M76)
+  ["2026-06-29T20:30:00.000Z", "gillette", "Germany", "Paraguay", 1, 1, 3, 4], // R32-2  (M74)
+  ["2026-06-30T01:00:00.000Z", "bbva", "Netherlands", "Morocco", 1, 1, 2, 3], // R32-3  (M75)
+  ["2026-06-29T17:00:00.000Z", "nrg", "Brazil", "Japan", 2, 1],         // R32-4  (M76)
   ["2026-06-30T21:00:00.000Z", "metlife", "France", "Sweden"],           // R32-5  (M77)
   ["2026-06-30T17:00:00.000Z", "att", "Ivory Coast", "Norway"],          // R32-6  (M78)
   ["2026-07-01T01:00:00.000Z", "azteca", "Mexico", "Ecuador"],           // R32-7  (M79)
@@ -235,15 +244,22 @@ const R32 = [
   ["2026-07-04T01:30:00.000Z", "arrowhead", "Colombia", "Ghana"],        // R32-15 (M87)
   ["2026-07-03T18:00:00.000Z", "att", "Australia", "Egypt"],             // R32-16 (M88)
 ];
-R32.forEach(([kickoff, venueId, home, away, homeScore, awayScore], i) => {
-  knockout.push(ko(`R32-${i + 1}`, "r32", kickoff, venueId, { home: tid(home), away: tid(away), homeScore, awayScore }));
+R32.forEach(([kickoff, venueId, home, away, homeScore, awayScore, homePenalties, awayPenalties], i) => {
+  knockout.push(ko(`R32-${i + 1}`, "r32", kickoff, venueId, {
+    home: tid(home),
+    away: tid(away),
+    homeScore,
+    awayScore,
+    homePenalties,
+    awayPenalties,
+  }));
 });
 
 // Round of 16 — matches 89–96. Each draws the winners of two R32 matches.
 const R16 = [
-  ["2026-07-04T21:00:00.000Z", "linc", ["R32-2", "R32-5"]],                 // M89
-  ["2026-07-04T17:00:00.000Z", "nrg", ["R32-1", "R32-3"], "Canada", null], // M90
-  ["2026-07-05T20:00:00.000Z", "metlife", ["R32-4", "R32-6"]],             // M91
+  ["2026-07-04T21:00:00.000Z", "linc", ["R32-2", "R32-5"], "Paraguay", null], // M89
+  ["2026-07-04T17:00:00.000Z", "nrg", ["R32-1", "R32-3"], "Canada", "Morocco"], // M90
+  ["2026-07-05T20:00:00.000Z", "metlife", ["R32-4", "R32-6"], "Brazil", null], // M91
   ["2026-07-06T00:00:00.000Z", "azteca", ["R32-7", "R32-8"]],              // M92
   ["2026-07-06T19:00:00.000Z", "att", ["R32-11", "R32-12"]],               // M93
   ["2026-07-07T00:00:00.000Z", "lumen", ["R32-9", "R32-10"]],              // M94
@@ -316,6 +332,9 @@ payload.metadata = {
     "https://digitalhub.fifa.com/m/1be9ce37eb98fcc5/original/FWC26-Match-Schedule_English.pdf",
     "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021518",
     "https://fdp.fifa.org/assetspublic/ce281/r12527/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12522/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12525/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12531/pdf/FullTimeMatchReport-English.pdf",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_round_of_32",
@@ -326,7 +345,7 @@ payload.metadata = {
   notes:
     "Group stage complete — all 72 results recorded; standings compute from scores. " +
     "Round of 32 resolved to qualified teams with official dates/venues; " +
-    "Match 73 complete: Canada advanced over South Africa. " +
+    "Matches 73–76 complete: Canada, Paraguay, Morocco, and Brazil advanced. " +
     "Round of 16 onward keep feeder placeholders unless a source position is fixed. " +
     "Knockout kickoff times are exact UTC instants cross-checked against FIFA-linked match pages.",
 };

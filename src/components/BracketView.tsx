@@ -24,7 +24,11 @@ const LINE_GOLD = "border-gold/50";
 
 function winnerSide(match: Match): "home" | "away" | null {
   if (match.status !== "finished" || match.homeScore == null || match.awayScore == null) return null;
-  if (match.homeScore === match.awayScore) return null;
+  if (match.homeScore === match.awayScore) {
+    if (match.homePenalties == null || match.awayPenalties == null) return null;
+    if (match.homePenalties === match.awayPenalties) return null;
+    return match.homePenalties > match.awayPenalties ? "home" : "away";
+  }
   return match.homeScore > match.awayScore ? "home" : "away";
 }
 
@@ -97,6 +101,11 @@ function BracketCard({
                 )}
               >
                 {i === 0 ? match.homeScore : match.awayScore}
+                {match.homePenalties != null && match.awayPenalties != null && (
+                  <span className="ml-0.5 text-[10px] text-ink-faint">
+                    ({i === 0 ? match.homePenalties : match.awayPenalties})
+                  </span>
+                )}
               </span>
             )}
           </div>

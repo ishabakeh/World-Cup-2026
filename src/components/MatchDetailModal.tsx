@@ -95,9 +95,16 @@ export function MatchDetailModal() {
                     <TeamSide side={view.home} />
                     <div className="flex flex-col items-center">
                       {match.status === "finished" ? (
-                        <span className="h-display text-3xl tabular-nums">
-                          {match.homeScore}–{match.awayScore}
-                        </span>
+                        <div className="flex flex-col items-center">
+                          <span className="h-display text-3xl tabular-nums">
+                            {match.homeScore}–{match.awayScore}
+                          </span>
+                          {match.homePenalties != null && match.awayPenalties != null && (
+                            <span className="mt-0.5 text-xs text-ink-muted">
+                              {match.homePenalties}–{match.awayPenalties} on penalties
+                            </span>
+                          )}
+                        </div>
                       ) : (
                         <span className="h-display text-2xl text-ink-faint">vs</span>
                       )}

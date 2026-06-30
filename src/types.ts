@@ -68,6 +68,8 @@ export interface Match {
   status: MatchStatus;
   homeScore: number | null;
   awayScore: number | null;
+  homePenalties?: number | null;
+  awayPenalties?: number | null;
   feeders?: { home: Feeder; away: Feeder } | null;
 }
 

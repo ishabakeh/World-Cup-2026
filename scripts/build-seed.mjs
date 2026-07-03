@@ -231,15 +231,15 @@ const R32 = [
   ["2026-06-29T20:30:00.000Z", "gillette", "Germany", "Paraguay", 1, 1, 3, 4], // R32-2  (M74)
   ["2026-06-30T01:00:00.000Z", "bbva", "Netherlands", "Morocco", 1, 1, 2, 3], // R32-3  (M75)
   ["2026-06-29T17:00:00.000Z", "nrg", "Brazil", "Japan", 2, 1],         // R32-4  (M76)
-  ["2026-06-30T21:00:00.000Z", "metlife", "France", "Sweden"],           // R32-5  (M77)
-  ["2026-06-30T17:00:00.000Z", "att", "Ivory Coast", "Norway"],          // R32-6  (M78)
-  ["2026-07-01T01:00:00.000Z", "azteca", "Mexico", "Ecuador"],           // R32-7  (M79)
-  ["2026-07-01T16:00:00.000Z", "mercedes", "England", "DR Congo"],       // R32-8  (M80)
-  ["2026-07-02T00:00:00.000Z", "levis", "United States", "Bosnia and Herzegovina"], // R32-9  (M81)
-  ["2026-07-01T20:00:00.000Z", "lumen", "Belgium", "Senegal"],           // R32-10 (M82)
-  ["2026-07-02T23:00:00.000Z", "bmo", "Portugal", "Croatia"],            // R32-11 (M83)
-  ["2026-07-02T19:00:00.000Z", "sofi", "Spain", "Austria"],              // R32-12 (M84)
-  ["2026-07-03T03:00:00.000Z", "bcplace", "Switzerland", "Algeria"],     // R32-13 (M85)
+  ["2026-06-30T21:00:00.000Z", "metlife", "France", "Sweden", 3, 0],    // R32-5  (M77)
+  ["2026-06-30T17:00:00.000Z", "att", "Ivory Coast", "Norway", 1, 2],   // R32-6  (M78)
+  ["2026-07-01T02:00:00.000Z", "azteca", "Mexico", "Ecuador", 2, 0],    // R32-7  (M79; weather delay)
+  ["2026-07-01T16:00:00.000Z", "mercedes", "England", "DR Congo", 2, 1], // R32-8  (M80)
+  ["2026-07-02T00:00:00.000Z", "levis", "United States", "Bosnia and Herzegovina", 2, 0], // R32-9  (M81)
+  ["2026-07-01T20:00:00.000Z", "lumen", "Belgium", "Senegal", 3, 2],    // R32-10 (M82, AET)
+  ["2026-07-02T23:00:00.000Z", "bmo", "Portugal", "Croatia", 2, 1],     // R32-11 (M83)
+  ["2026-07-02T19:00:00.000Z", "sofi", "Spain", "Austria", 3, 0],       // R32-12 (M84)
+  ["2026-07-03T03:00:00.000Z", "bcplace", "Switzerland", "Algeria", 2, 0], // R32-13 (M85)
   ["2026-07-03T22:00:00.000Z", "hardrock", "Argentina", "Cape Verde"],   // R32-14 (M86)
   ["2026-07-04T01:30:00.000Z", "arrowhead", "Colombia", "Ghana"],        // R32-15 (M87)
   ["2026-07-03T18:00:00.000Z", "att", "Australia", "Egypt"],             // R32-16 (M88)
@@ -257,14 +257,14 @@ R32.forEach(([kickoff, venueId, home, away, homeScore, awayScore, homePenalties,
 
 // Round of 16 — matches 89–96. Each draws the winners of two R32 matches.
 const R16 = [
-  ["2026-07-04T21:00:00.000Z", "linc", ["R32-2", "R32-5"], "Paraguay", null], // M89
+  ["2026-07-04T21:00:00.000Z", "linc", ["R32-2", "R32-5"], "Paraguay", "France"], // M89
   ["2026-07-04T17:00:00.000Z", "nrg", ["R32-1", "R32-3"], "Canada", "Morocco"], // M90
-  ["2026-07-05T20:00:00.000Z", "metlife", ["R32-4", "R32-6"], "Brazil", null], // M91
-  ["2026-07-06T00:00:00.000Z", "azteca", ["R32-7", "R32-8"]],              // M92
-  ["2026-07-06T19:00:00.000Z", "att", ["R32-11", "R32-12"]],               // M93
-  ["2026-07-07T00:00:00.000Z", "lumen", ["R32-9", "R32-10"]],              // M94
+  ["2026-07-05T20:00:00.000Z", "metlife", ["R32-4", "R32-6"], "Brazil", "Norway"], // M91
+  ["2026-07-06T00:00:00.000Z", "azteca", ["R32-7", "R32-8"], "Mexico", "England"], // M92
+  ["2026-07-06T19:00:00.000Z", "att", ["R32-11", "R32-12"], "Portugal", "Spain"], // M93
+  ["2026-07-07T00:00:00.000Z", "lumen", ["R32-9", "R32-10"], "United States", "Belgium"], // M94
   ["2026-07-07T16:00:00.000Z", "mercedes", ["R32-14", "R32-16"]],          // M95
-  ["2026-07-07T20:00:00.000Z", "bcplace", ["R32-13", "R32-15"]],           // M96
+  ["2026-07-07T20:00:00.000Z", "bcplace", ["R32-13", "R32-15"], "Switzerland", null], // M96
 ];
 R16.forEach(([kickoff, venueId, [h, a], home, away], i) => {
   knockout.push(ko(`R16-${i + 1}`, "r16", kickoff, venueId, {
@@ -335,6 +335,15 @@ payload.metadata = {
     "https://fdp.fifa.org/assetspublic/ce281/r12522/pdf/FullTimeMatchReport-English.pdf",
     "https://fdp.fifa.org/assetspublic/ce281/r12525/pdf/FullTimeMatchReport-English.pdf",
     "https://fdp.fifa.org/assetspublic/ce281/r12531/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12521/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12523/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12528/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12529/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12532/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12533/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12534/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12535/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12536/pdf/FullTimeMatchReport-English.pdf",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_round_of_32",
@@ -345,7 +354,7 @@ payload.metadata = {
   notes:
     "Group stage complete — all 72 results recorded; standings compute from scores. " +
     "Round of 32 resolved to qualified teams with official dates/venues; " +
-    "Matches 73–76 complete: Canada, Paraguay, Morocco, and Brazil advanced. " +
+    "Matches 73–85 complete; R16 slots are resolved where winners are known. " +
     "Round of 16 onward keep feeder placeholders unless a source position is fixed. " +
     "Knockout kickoff times are exact UTC instants cross-checked against FIFA-linked match pages.",
 };

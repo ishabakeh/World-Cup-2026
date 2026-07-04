@@ -240,9 +240,9 @@ const R32 = [
   ["2026-07-02T23:00:00.000Z", "bmo", "Portugal", "Croatia", 2, 1],     // R32-11 (M83)
   ["2026-07-02T19:00:00.000Z", "sofi", "Spain", "Austria", 3, 0],       // R32-12 (M84)
   ["2026-07-03T03:00:00.000Z", "bcplace", "Switzerland", "Algeria", 2, 0], // R32-13 (M85)
-  ["2026-07-03T22:00:00.000Z", "hardrock", "Argentina", "Cape Verde"],   // R32-14 (M86)
-  ["2026-07-04T01:30:00.000Z", "arrowhead", "Colombia", "Ghana"],        // R32-15 (M87)
-  ["2026-07-03T18:00:00.000Z", "att", "Australia", "Egypt"],             // R32-16 (M88)
+  ["2026-07-03T22:00:00.000Z", "hardrock", "Argentina", "Cape Verde", 3, 2], // R32-14 (M86, AET)
+  ["2026-07-04T01:30:00.000Z", "arrowhead", "Colombia", "Ghana", 1, 0],  // R32-15 (M87)
+  ["2026-07-03T18:00:00.000Z", "att", "Australia", "Egypt", 1, 1, 2, 4], // R32-16 (M88)
 ];
 R32.forEach(([kickoff, venueId, home, away, homeScore, awayScore, homePenalties, awayPenalties], i) => {
   knockout.push(ko(`R32-${i + 1}`, "r32", kickoff, venueId, {
@@ -263,8 +263,8 @@ const R16 = [
   ["2026-07-06T00:00:00.000Z", "azteca", ["R32-7", "R32-8"], "Mexico", "England"], // M92
   ["2026-07-06T19:00:00.000Z", "att", ["R32-11", "R32-12"], "Portugal", "Spain"], // M93
   ["2026-07-07T00:00:00.000Z", "lumen", ["R32-9", "R32-10"], "United States", "Belgium"], // M94
-  ["2026-07-07T16:00:00.000Z", "mercedes", ["R32-14", "R32-16"]],          // M95
-  ["2026-07-07T20:00:00.000Z", "bcplace", ["R32-13", "R32-15"], "Switzerland", null], // M96
+  ["2026-07-07T16:00:00.000Z", "mercedes", ["R32-14", "R32-16"], "Argentina", "Egypt"], // M95
+  ["2026-07-07T20:00:00.000Z", "bcplace", ["R32-13", "R32-15"], "Switzerland", "Colombia"], // M96
 ];
 R16.forEach(([kickoff, venueId, [h, a], home, away], i) => {
   knockout.push(ko(`R16-${i + 1}`, "r16", kickoff, venueId, {
@@ -337,8 +337,11 @@ payload.metadata = {
     "https://fdp.fifa.org/assetspublic/ce281/r12531/pdf/FullTimeMatchReport-English.pdf",
     "https://fdp.fifa.org/assetspublic/ce281/r12521/pdf/FullTimeMatchReport-English.pdf",
     "https://fdp.fifa.org/assetspublic/ce281/r12523/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12524/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12526/pdf/FullTimeMatchReport-English.pdf",
     "https://fdp.fifa.org/assetspublic/ce281/r12528/pdf/FullTimeMatchReport-English.pdf",
     "https://fdp.fifa.org/assetspublic/ce281/r12529/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12530/pdf/FullTimeMatchReport-English.pdf",
     "https://fdp.fifa.org/assetspublic/ce281/r12532/pdf/FullTimeMatchReport-English.pdf",
     "https://fdp.fifa.org/assetspublic/ce281/r12533/pdf/FullTimeMatchReport-English.pdf",
     "https://fdp.fifa.org/assetspublic/ce281/r12534/pdf/FullTimeMatchReport-English.pdf",
@@ -354,7 +357,7 @@ payload.metadata = {
   notes:
     "Group stage complete — all 72 results recorded; standings compute from scores. " +
     "Round of 32 resolved to qualified teams with official dates/venues; " +
-    "Matches 73–85 complete; R16 slots are resolved where winners are known. " +
+    "Round of 32 complete; all R16 slots are resolved. " +
     "Round of 16 onward keep feeder placeholders unless a source position is fixed. " +
     "Knockout kickoff times are exact UTC instants cross-checked against FIFA-linked match pages.",
 };

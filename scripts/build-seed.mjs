@@ -257,8 +257,8 @@ R32.forEach(([kickoff, venueId, home, away, homeScore, awayScore, homePenalties,
 
 // Round of 16 — matches 89–96. Each draws the winners of two R32 matches.
 const R16 = [
-  ["2026-07-04T21:00:00.000Z", "linc", ["R32-2", "R32-5"], "Paraguay", "France"], // M89
-  ["2026-07-04T17:00:00.000Z", "nrg", ["R32-1", "R32-3"], "Canada", "Morocco"], // M90
+  ["2026-07-04T21:00:00.000Z", "linc", ["R32-2", "R32-5"], "Paraguay", "France", 0, 1], // M89
+  ["2026-07-04T17:00:00.000Z", "nrg", ["R32-1", "R32-3"], "Canada", "Morocco", 0, 3], // M90
   ["2026-07-05T20:00:00.000Z", "metlife", ["R32-4", "R32-6"], "Brazil", "Norway"], // M91
   ["2026-07-06T00:00:00.000Z", "azteca", ["R32-7", "R32-8"], "Mexico", "England"], // M92
   ["2026-07-06T19:00:00.000Z", "att", ["R32-11", "R32-12"], "Portugal", "Spain"], // M93
@@ -266,23 +266,29 @@ const R16 = [
   ["2026-07-07T16:00:00.000Z", "mercedes", ["R32-14", "R32-16"], "Argentina", "Egypt"], // M95
   ["2026-07-07T20:00:00.000Z", "bcplace", ["R32-13", "R32-15"], "Switzerland", "Colombia"], // M96
 ];
-R16.forEach(([kickoff, venueId, [h, a], home, away], i) => {
+R16.forEach(([kickoff, venueId, [h, a], home, away, homeScore, awayScore], i) => {
   knockout.push(ko(`R16-${i + 1}`, "r16", kickoff, venueId, {
     home: home ? tid(home) : null,
     away: away ? tid(away) : null,
+    homeScore,
+    awayScore,
     feeders: { home: W(h), away: W(a) },
   }));
 });
 
 // Quarter-finals — matches 97–100.
 const QF = [
-  ["2026-07-09T20:00:00.000Z", "gillette", ["R16-1", "R16-2"]], // M97
+  ["2026-07-09T20:00:00.000Z", "gillette", ["R16-1", "R16-2"], "France", "Morocco"], // M97
   ["2026-07-10T19:00:00.000Z", "sofi", ["R16-5", "R16-6"]],     // M98
   ["2026-07-11T21:00:00.000Z", "hardrock", ["R16-3", "R16-4"]], // M99
   ["2026-07-12T01:00:00.000Z", "arrowhead", ["R16-7", "R16-8"]], // M100
 ];
-QF.forEach(([kickoff, venueId, [h, a]], i) => {
-  knockout.push(ko(`QF-${i + 1}`, "qf", kickoff, venueId, { feeders: { home: W(h), away: W(a) } }));
+QF.forEach(([kickoff, venueId, [h, a], home, away], i) => {
+  knockout.push(ko(`QF-${i + 1}`, "qf", kickoff, venueId, {
+    home: home ? tid(home) : null,
+    away: away ? tid(away) : null,
+    feeders: { home: W(h), away: W(a) },
+  }));
 });
 
 // Semi-finals — matches 101–102.
@@ -347,6 +353,8 @@ payload.metadata = {
     "https://fdp.fifa.org/assetspublic/ce281/r12534/pdf/FullTimeMatchReport-English.pdf",
     "https://fdp.fifa.org/assetspublic/ce281/r12535/pdf/FullTimeMatchReport-English.pdf",
     "https://fdp.fifa.org/assetspublic/ce281/r12536/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12539/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12542/pdf/FullTimeMatchReport-English.pdf",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_round_of_32",
@@ -357,7 +365,7 @@ payload.metadata = {
   notes:
     "Group stage complete — all 72 results recorded; standings compute from scores. " +
     "Round of 32 resolved to qualified teams with official dates/venues; " +
-    "Round of 32 complete; all R16 slots are resolved. " +
+    "Round of 32 complete; R16 matches 89–90 complete; QF1 resolved to France v Morocco. " +
     "Round of 16 onward keep feeder placeholders unless a source position is fixed. " +
     "Knockout kickoff times are exact UTC instants cross-checked against FIFA-linked match pages.",
 };

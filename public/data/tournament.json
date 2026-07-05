@@ -2080,9 +2080,9 @@
       "awayTeamId": "fra",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 1,
       "homePenalties": null,
       "awayPenalties": null,
       "feeders": {
@@ -2105,9 +2105,9 @@
       "awayTeamId": "mar",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 3,
       "homePenalties": null,
       "awayPenalties": null,
       "feeders": {
@@ -2276,8 +2276,8 @@
       "groupId": null,
       "venueId": "gillette",
       "kickoff": "2026-07-09T20:00:00.000Z",
-      "homeTeamId": null,
-      "awayTeamId": null,
+      "homeTeamId": "fra",
+      "awayTeamId": "mar",
       "homeLabel": null,
       "awayLabel": null,
       "status": "scheduled",
@@ -2492,13 +2492,15 @@
       "https://fdp.fifa.org/assetspublic/ce281/r12534/pdf/FullTimeMatchReport-English.pdf",
       "https://fdp.fifa.org/assetspublic/ce281/r12535/pdf/FullTimeMatchReport-English.pdf",
       "https://fdp.fifa.org/assetspublic/ce281/r12536/pdf/FullTimeMatchReport-English.pdf",
+      "https://fdp.fifa.org/assetspublic/ce281/r12539/pdf/FullTimeMatchReport-English.pdf",
+      "https://fdp.fifa.org/assetspublic/ce281/r12542/pdf/FullTimeMatchReport-English.pdf",
       "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
       "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage",
       "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_round_of_32"
     ],
-    "crawledAt": "2026-07-04T11:11:50.000Z",
-    "version": "71134c8de197",
+    "crawledAt": "2026-07-05T10:55:46.000Z",
+    "version": "468e76a176a1",
     "schemaVersion": 1,
-    "notes": "Group stage complete — all 72 results recorded; standings compute from scores. Round of 32 resolved to qualified teams with official dates/venues; Round of 32 complete; all R16 slots are resolved. Round of 16 onward keep feeder placeholders unless a source position is fixed. Knockout kickoff times are exact UTC instants cross-checked against FIFA-linked match pages."
+    "notes": "Group stage complete — all 72 results recorded; standings compute from scores. Round of 32 resolved to qualified teams with official dates/venues; Round of 32 complete; R16 matches 89–90 complete; QF1 resolved to France v Morocco. Round of 16 onward keep feeder placeholders unless a source position is fixed. Knockout kickoff times are exact UTC instants cross-checked against FIFA-linked match pages."
   }
 }

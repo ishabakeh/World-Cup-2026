@@ -264,35 +264,41 @@ const R16 = [
   ["2026-07-06T19:00:00.000Z", "att", ["R32-11", "R32-12"], "Portugal", "Spain", 0, 1], // M93
   ["2026-07-07T00:00:00.000Z", "lumen", ["R32-9", "R32-10"], "United States", "Belgium", 1, 4], // M94
   ["2026-07-07T16:00:00.000Z", "mercedes", ["R32-14", "R32-16"], "Argentina", "Egypt", 3, 2], // M95
-  ["2026-07-07T20:00:00.000Z", "bcplace", ["R32-13", "R32-15"], "Switzerland", "Colombia"], // M96
+  ["2026-07-07T20:00:00.000Z", "bcplace", ["R32-13", "R32-15"], "Switzerland", "Colombia", 0, 0, 4, 3], // M96, Switzerland win on penalties
 ];
-R16.forEach(([kickoff, venueId, [h, a], home, away, homeScore, awayScore], i) => {
+R16.forEach(([kickoff, venueId, [h, a], home, away, homeScore, awayScore, homePenalties, awayPenalties], i) => {
   knockout.push(ko(`R16-${i + 1}`, "r16", kickoff, venueId, {
     home: home ? tid(home) : null,
     away: away ? tid(away) : null,
     homeScore,
     awayScore,
+    homePenalties,
+    awayPenalties,
     feeders: { home: W(h), away: W(a) },
   }));
 });
 
 // Quarter-finals — matches 97–100.
 const QF = [
-  ["2026-07-09T20:00:00.000Z", "gillette", ["R16-1", "R16-2"], "France", "Morocco"], // M97
-  ["2026-07-10T19:00:00.000Z", "sofi", ["R16-5", "R16-6"], "Spain", "Belgium"], // M98
+  ["2026-07-09T20:00:00.000Z", "gillette", ["R16-1", "R16-2"], "France", "Morocco", 2, 0], // M97
+  ["2026-07-10T19:00:00.000Z", "sofi", ["R16-5", "R16-6"], "Spain", "Belgium", 2, 1], // M98
   ["2026-07-11T21:00:00.000Z", "hardrock", ["R16-3", "R16-4"], "Norway", "England"], // M99
-  ["2026-07-12T01:00:00.000Z", "arrowhead", ["R16-7", "R16-8"], "Argentina"], // M100
+  ["2026-07-12T01:00:00.000Z", "arrowhead", ["R16-7", "R16-8"], "Argentina", "Switzerland"], // M100
 ];
-QF.forEach(([kickoff, venueId, [h, a], home, away], i) => {
+QF.forEach(([kickoff, venueId, [h, a], home, away, homeScore, awayScore, homePenalties, awayPenalties], i) => {
   knockout.push(ko(`QF-${i + 1}`, "qf", kickoff, venueId, {
     home: home ? tid(home) : null,
     away: away ? tid(away) : null,
+    homeScore,
+    awayScore,
+    homePenalties,
+    awayPenalties,
     feeders: { home: W(h), away: W(a) },
   }));
 });
 
 // Semi-finals — matches 101–102.
-knockout.push(ko("SF-1", "sf", "2026-07-14T19:00:00.000Z", "att", { feeders: { home: W("QF-1"), away: W("QF-2") } }));
+knockout.push(ko("SF-1", "sf", "2026-07-14T19:00:00.000Z", "att", { home: tid("France"), away: tid("Spain"), feeders: { home: W("QF-1"), away: W("QF-2") } }));
 knockout.push(ko("SF-2", "sf", "2026-07-15T19:00:00.000Z", "mercedes", { feeders: { home: W("QF-3"), away: W("QF-4") } }));
 // Third place — match 103, July 18, Hard Rock Stadium, Miami.
 knockout.push(ko("TP", "third", "2026-07-18T21:00:00.000Z", "hardrock", { feeders: { home: L("SF-1"), away: L("SF-2") } }));
@@ -360,6 +366,9 @@ payload.metadata = {
     "https://fdp.fifa.org/assetspublic/ce281/r12541/pdf/FullTimeMatchReport-English.pdf",
     "https://fdp.fifa.org/assetspublic/ce281/r12542/pdf/FullTimeMatchReport-English.pdf",
     "https://fdp.fifa.org/assetspublic/ce281/r12543/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12544/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12545/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12547/pdf/FullTimeMatchReport-English.pdf",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_round_of_32",
@@ -370,8 +379,8 @@ payload.metadata = {
   notes:
     "Group stage complete — all 72 results recorded; standings compute from scores. " +
     "Round of 32 resolved to qualified teams with official dates/venues; " +
-    "Round of 32 complete; R16 matches 89–95 complete; QF1 resolved to France v Morocco, " +
-    "QF2 to Spain v Belgium, QF3 to Norway v England, and QF4 home to Argentina. " +
+    "Round of 32 and Round of 16 complete; QF1 and QF2 complete; " +
+    "SF1 resolved to France v Spain, QF3 to Norway v England, and QF4 to Argentina v Switzerland. " +
     "Round of 16 onward keep feeder placeholders unless a source position is fixed. " +
     "Knockout kickoff times are exact UTC instants cross-checked against FIFA-linked match pages.",
 };

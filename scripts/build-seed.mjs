@@ -282,8 +282,8 @@ R16.forEach(([kickoff, venueId, [h, a], home, away, homeScore, awayScore, homePe
 const QF = [
   ["2026-07-09T20:00:00.000Z", "gillette", ["R16-1", "R16-2"], "France", "Morocco", 2, 0], // M97
   ["2026-07-10T19:00:00.000Z", "sofi", ["R16-5", "R16-6"], "Spain", "Belgium", 2, 1], // M98
-  ["2026-07-11T21:00:00.000Z", "hardrock", ["R16-3", "R16-4"], "Norway", "England"], // M99
-  ["2026-07-12T01:00:00.000Z", "arrowhead", ["R16-7", "R16-8"], "Argentina", "Switzerland"], // M100
+  ["2026-07-11T21:00:00.000Z", "hardrock", ["R16-3", "R16-4"], "Norway", "England", 1, 2], // M99, AET
+  ["2026-07-12T01:00:00.000Z", "arrowhead", ["R16-7", "R16-8"], "Argentina", "Switzerland", 3, 1], // M100, AET
 ];
 QF.forEach(([kickoff, venueId, [h, a], home, away, homeScore, awayScore, homePenalties, awayPenalties], i) => {
   knockout.push(ko(`QF-${i + 1}`, "qf", kickoff, venueId, {
@@ -299,7 +299,7 @@ QF.forEach(([kickoff, venueId, [h, a], home, away, homeScore, awayScore, homePen
 
 // Semi-finals — matches 101–102.
 knockout.push(ko("SF-1", "sf", "2026-07-14T19:00:00.000Z", "att", { home: tid("France"), away: tid("Spain"), feeders: { home: W("QF-1"), away: W("QF-2") } }));
-knockout.push(ko("SF-2", "sf", "2026-07-15T19:00:00.000Z", "mercedes", { feeders: { home: W("QF-3"), away: W("QF-4") } }));
+knockout.push(ko("SF-2", "sf", "2026-07-15T19:00:00.000Z", "mercedes", { home: tid("England"), away: tid("Argentina"), feeders: { home: W("QF-3"), away: W("QF-4") } }));
 // Third place — match 103, July 18, Hard Rock Stadium, Miami.
 knockout.push(ko("TP", "third", "2026-07-18T21:00:00.000Z", "hardrock", { feeders: { home: L("SF-1"), away: L("SF-2") } }));
 // Final — match 104, July 19, MetLife Stadium, NY/NJ.
@@ -368,7 +368,9 @@ payload.metadata = {
     "https://fdp.fifa.org/assetspublic/ce281/r12543/pdf/FullTimeMatchReport-English.pdf",
     "https://fdp.fifa.org/assetspublic/ce281/r12544/pdf/FullTimeMatchReport-English.pdf",
     "https://fdp.fifa.org/assetspublic/ce281/r12545/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12546/pdf/FullTimeMatchReport-English.pdf",
     "https://fdp.fifa.org/assetspublic/ce281/r12547/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12548/pdf/FullTimeMatchReport-English.pdf",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_round_of_32",
@@ -379,8 +381,8 @@ payload.metadata = {
   notes:
     "Group stage complete — all 72 results recorded; standings compute from scores. " +
     "Round of 32 resolved to qualified teams with official dates/venues; " +
-    "Round of 32 and Round of 16 complete; QF1 and QF2 complete; " +
-    "SF1 resolved to France v Spain, QF3 to Norway v England, and QF4 to Argentina v Switzerland. " +
+    "Round of 32, Round of 16, and quarter-finals complete; " +
+    "SF1 resolved to France v Spain and SF2 to England v Argentina. " +
     "Round of 16 onward keep feeder placeholders unless a source position is fixed. " +
     "Knockout kickoff times are exact UTC instants cross-checked against FIFA-linked match pages.",
 };

@@ -2330,9 +2330,9 @@
       "awayTeamId": "eng",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 2,
       "homePenalties": null,
       "awayPenalties": null,
       "feeders": {
@@ -2355,9 +2355,9 @@
       "awayTeamId": "sui",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 1,
       "homePenalties": null,
       "awayPenalties": null,
       "feeders": {
@@ -2401,8 +2401,8 @@
       "groupId": null,
       "venueId": "mercedes",
       "kickoff": "2026-07-15T19:00:00.000Z",
-      "homeTeamId": null,
-      "awayTeamId": null,
+      "homeTeamId": "eng",
+      "awayTeamId": "arg",
       "homeLabel": null,
       "awayLabel": null,
       "status": "scheduled",
@@ -2501,14 +2501,16 @@
       "https://fdp.fifa.org/assetspublic/ce281/r12543/pdf/FullTimeMatchReport-English.pdf",
       "https://fdp.fifa.org/assetspublic/ce281/r12544/pdf/FullTimeMatchReport-English.pdf",
       "https://fdp.fifa.org/assetspublic/ce281/r12545/pdf/FullTimeMatchReport-English.pdf",
+      "https://fdp.fifa.org/assetspublic/ce281/r12546/pdf/FullTimeMatchReport-English.pdf",
       "https://fdp.fifa.org/assetspublic/ce281/r12547/pdf/FullTimeMatchReport-English.pdf",
+      "https://fdp.fifa.org/assetspublic/ce281/r12548/pdf/FullTimeMatchReport-English.pdf",
       "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
       "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage",
       "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_round_of_32"
     ],
-    "crawledAt": "2026-07-11T18:01:25.000Z",
-    "version": "02a10fd82ec9",
+    "crawledAt": "2026-07-12T13:39:26.000Z",
+    "version": "2c6505ca4c7f",
     "schemaVersion": 1,
-    "notes": "Group stage complete — all 72 results recorded; standings compute from scores. Round of 32 resolved to qualified teams with official dates/venues; Round of 32 and Round of 16 complete; QF1 and QF2 complete; SF1 resolved to France v Spain, QF3 to Norway v England, and QF4 to Argentina v Switzerland. Round of 16 onward keep feeder placeholders unless a source position is fixed. Knockout kickoff times are exact UTC instants cross-checked against FIFA-linked match pages."
+    "notes": "Group stage complete — all 72 results recorded; standings compute from scores. Round of 32 resolved to qualified teams with official dates/venues; Round of 32, Round of 16, and quarter-finals complete; SF1 resolved to France v Spain and SF2 to England v Argentina. Round of 16 onward keep feeder placeholders unless a source position is fixed. Knockout kickoff times are exact UTC instants cross-checked against FIFA-linked match pages."
   }
 }

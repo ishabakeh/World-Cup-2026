@@ -301,9 +301,9 @@ QF.forEach(([kickoff, venueId, [h, a], home, away, homeScore, awayScore, homePen
 knockout.push(ko("SF-1", "sf", "2026-07-14T19:00:00.000Z", "att", { home: tid("France"), away: tid("Spain"), homeScore: 0, awayScore: 2, feeders: { home: W("QF-1"), away: W("QF-2") } }));
 knockout.push(ko("SF-2", "sf", "2026-07-15T19:00:00.000Z", "mercedes", { home: tid("England"), away: tid("Argentina"), homeScore: 1, awayScore: 2, feeders: { home: W("QF-3"), away: W("QF-4") } }));
 // Third place — match 103, July 18, Hard Rock Stadium, Miami.
-knockout.push(ko("TP", "third", "2026-07-18T21:00:00.000Z", "hardrock", { home: tid("France"), away: tid("England"), feeders: { home: L("SF-1"), away: L("SF-2") } }));
+knockout.push(ko("TP", "third", "2026-07-18T21:00:00.000Z", "hardrock", { home: tid("France"), away: tid("England"), homeScore: 4, awayScore: 6, feeders: { home: L("SF-1"), away: L("SF-2") } }));
 // Final — match 104, July 19, MetLife Stadium, NY/NJ.
-knockout.push(ko("FINAL", "final", "2026-07-19T19:00:00.000Z", "metlife", { home: tid("Spain"), away: tid("Argentina"), feeders: { home: W("SF-1"), away: W("SF-2") } }));
+knockout.push(ko("FINAL", "final", "2026-07-19T19:00:00.000Z", "metlife", { home: tid("Spain"), away: tid("Argentina"), homeScore: 1, awayScore: 0, feeders: { home: W("SF-1"), away: W("SF-2") } }));
 
 const allMatches = [...matches, ...knockout];
 
@@ -373,6 +373,8 @@ payload.metadata = {
     "https://fdp.fifa.org/assetspublic/ce281/r12548/pdf/FullTimeMatchReport-English.pdf",
     "https://fdp.fifa.org/assetspublic/ce281/r12549/pdf/FullTimeMatchReport-English.pdf",
     "https://fdp.fifa.org/assetspublic/ce281/r12550/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12551/pdf/FullTimeMatchReport-English.pdf",
+    "https://fdp.fifa.org/assetspublic/ce281/r12552/pdf/FullTimeMatchReport-English.pdf",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage",
     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_round_of_32",
@@ -383,9 +385,8 @@ payload.metadata = {
   notes:
     "Group stage complete — all 72 results recorded; standings compute from scores. " +
     "Round of 32 resolved to qualified teams with official dates/venues; " +
-    "Round of 32, Round of 16, quarter-finals, and semi-finals complete; " +
-    "third-place match resolved to France v England and final to Spain v Argentina. " +
-    "Round of 16 onward keep feeder placeholders unless a source position is fixed. " +
+    "Tournament complete — all 104 matches recorded. " +
+    "England finished third; Spain defeated Argentina in the final after extra time. " +
     "Knockout kickoff times are exact UTC instants cross-checked against FIFA-linked match pages.",
 };
 

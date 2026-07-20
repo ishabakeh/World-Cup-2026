@@ -2430,9 +2430,9 @@
       "awayTeamId": "eng",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "finished",
+      "homeScore": 4,
+      "awayScore": 6,
       "homePenalties": null,
       "awayPenalties": null,
       "feeders": {
@@ -2455,9 +2455,9 @@
       "awayTeamId": "arg",
       "homeLabel": null,
       "awayLabel": null,
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 0,
       "homePenalties": null,
       "awayPenalties": null,
       "feeders": {
@@ -2506,13 +2506,15 @@
       "https://fdp.fifa.org/assetspublic/ce281/r12548/pdf/FullTimeMatchReport-English.pdf",
       "https://fdp.fifa.org/assetspublic/ce281/r12549/pdf/FullTimeMatchReport-English.pdf",
       "https://fdp.fifa.org/assetspublic/ce281/r12550/pdf/FullTimeMatchReport-English.pdf",
+      "https://fdp.fifa.org/assetspublic/ce281/r12551/pdf/FullTimeMatchReport-English.pdf",
+      "https://fdp.fifa.org/assetspublic/ce281/r12552/pdf/FullTimeMatchReport-English.pdf",
       "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
       "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage",
       "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_round_of_32"
     ],
-    "crawledAt": "2026-07-16T19:46:11.000Z",
-    "version": "7a865e6ccd11",
+    "crawledAt": "2026-07-20T12:14:39.000Z",
+    "version": "f0f31f685dd7",
     "schemaVersion": 1,
-    "notes": "Group stage complete — all 72 results recorded; standings compute from scores. Round of 32 resolved to qualified teams with official dates/venues; Round of 32, Round of 16, quarter-finals, and semi-finals complete; third-place match resolved to France v England and final to Spain v Argentina. Round of 16 onward keep feeder placeholders unless a source position is fixed. Knockout kickoff times are exact UTC instants cross-checked against FIFA-linked match pages."
+    "notes": "Group stage complete — all 72 results recorded; standings compute from scores. Round of 32 resolved to qualified teams with official dates/venues; Tournament complete — all 104 matches recorded. England finished third; Spain defeated Argentina in the final after extra time. Knockout kickoff times are exact UTC instants cross-checked against FIFA-linked match pages."
   }
 }
